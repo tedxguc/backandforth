@@ -1,18 +1,67 @@
-.greeting{
-	text-align: center;
-	font-size: 3em;
+.greeting {
+    text-align: center;
+    font-size: 3em;
 }
-#q14{
-	display: inline-block;
-	width: 10%;
-	font-size: 0.8em;
+
+#q14 {
+    display: inline-block;
+    width: 10%;
+    font-size: 0.8em;
 }
-#q1, 
+
+#q1,
 #q12,
-#q13
-{	
-	display: inline-block;
+#q13 {
+    display: inline-block;
+    width: auto;
+    font-size: 0.8em;
+    min-width: 18%;
+}
+
+#q21,
+#q2 {
+    display: inline-block;
+    width: auto;
+    font-size: 0.7em;
+    min-width: 27%;
+}
+
+#q3 {
 	width: auto;
-	font-size: 0.8em;
-	min-width: 18%;
+    font-size: 0.7em;
+    min-width: 100%;
+    color:#404040;
+
+}
+
+#q16 {
+    display: none;
+    width: auto;
+    font-size: 0.8em;
+    min-width: 18%;
+}
+
+#firstQ {
+    display: none;
+}
+
+#fieldb {
+    display: inline-block;
+    font-size: 0.4em;
+}
+
+#fieldb:hover:after {
+    content: '\2716';
+    -webkit-transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
+    transform: translate3d(0, -50%, 0) rotate3d(0, 0, 1, 45deg);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+textarea {
+    width:200px;
+    resize:none;
+    overflow:hidden;
+    font-size:18px;
+    height:1.1em;
+    padding:2px;
 }

@@ -194,7 +194,7 @@ button.fs-continue,
 	color: rgba(0,0,0,0.4);
 	border-radius: 50%;
 	content: 'i';
-	vertical-align: top;
+	vertical-align: middle;
 	text-align: center;
 	font-weight: 700;
 	font-style: italic;
@@ -245,7 +245,7 @@ button.fs-continue,
 	border: none;
 	border-bottom: 2px solid rgba(0,0,0,0.2);
 	background-color: transparent;
-	color: #767273;
+	color: #404040;
 	text-overflow: ellipsis;
 	font-weight: bold;
 	font-size: 1.5em;
@@ -516,7 +516,7 @@ button.fs-continue,
 	top: 0;
 	width: 0%;
 	height: 0.5em;
-	background: #fffed8;
+	background: #1C1C16;
 	-webkit-transition: width 0.3s ease-in-out;
 	transition: width 0.3s ease-in-out;
 }

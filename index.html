@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-underline.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/modernizr.custom.js"></script>
@@ -26,36 +27,72 @@
                 <div class="greeting" style="white-space:pre">
                 </div>
             </div>
+            <!--  <div style="width:100%;">
+                <svg id="arrow" width="100%">
+                    <rect id="rect" width="25" height="25" x="10%" y="10%" fill="gray" stroke="rgba(80, 80, 80, 1)" stroke-width="0px" />
+                    <g id="arrowsvg" stroke-linejoin="miter" transform="translate(-132.6875,-382.71685)" stroke="#339" stroke-linecap="butt" stroke-dasharray="none" stroke-miterlimit="10" stroke-width="1.875" fill="none">
+                        <path id="path170" d="m134.48865,392.33734,45.25,0,58.06627,0,2.92375,0c1.16,0,1.16-1.7975,0-1.7975h-45.25002-58.06625-2.9225c-1.16,0-1.16,1.7975-0.001,1.7975z" />
+                        <path id="path174" d="m235.14229,385.70096c2.045,2.27875,4.09,4.5575,6.13625,6.8375v-1.27125c-2.27875,2.045-4.5575,4.09-6.83625,6.135-0.86375,0.77625,0.41125,2.0425,1.26875,1.27125,2.28-2.045,4.55875-4.09,6.8375-6.135,0.37875-0.34,0.31375-0.9225,0-1.27125-2.045-2.27875-4.09-4.5575-6.135-6.8375-0.77625-0.86375-2.04375,0.4125-1.27125,1.27125z" />
+                        <path id="path178" d="m134.9134,385.22859c2.045,2.27875,4.09,4.5575,6.135,6.83625v-1.27125c-2.27875,2.045-4.5575,4.09-6.83625,6.135-0.86375,0.77625,0.41125,2.0425,1.27125,1.27125,2.27875-2.045,4.5575-4.09,6.8375-6.13625,0.37875-0.34,0.3125-0.92125,0-1.27125-2.045-2.27875-4.09-4.5575-6.13625-6.8375-0.775-0.8625-2.0425,0.41375-1.27125,1.27375z" />
+                        <path id="path182" d="m141.1909,385.58747c2.045,2.27875,4.09,4.5575,6.13625,6.8375v-1.27125c-2.27875,2.045-4.5575,4.09-6.83625,6.135-0.86375,0.77625,0.41125,2.0425,1.27125,1.27125,2.27875-2.045,4.5575-4.09,6.83625-6.135,0.37875-0.34,0.3125-0.92125,0-1.27125-2.045-2.27875-4.09-4.5575-6.135-6.8375-0.77625-0.86375-2.04375,0.4125-1.2725,1.27125z" />
+                    </g>
+                </svg>
+            </div> -->
             <form id="myform" class="fs-form fs-form-full" autocomplete="off">
                 <ol class="fs-fields">
-                    <li>
-                    <!--     <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
+                    <li id="firstQ">
+                        <!--     <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
                         <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/> -->
-
-                       <label class="fs-field-label fs-anim-upper" for="q1">My name is</label>
-                <input type="text" value="" class="fs-anim-lower" id="q1" name="q1" placeholder="First" required/>
-                <input type="text" value="" class="fs-anim-lower" id="q12" name="q12" placeholder="Middle" required />
-                <input type="text" value="" class="fs-anim-lower" id="q13" name="q13" placeholder="Last" required /> .
-            <br>
-                <label class="fs-field-label fs-anim-upper" for="q14"> I'm</label>
-                <input type="number" value="" placeholder="Age" min="10" max="90" class="fs-anim-lower" id="q14" name="q14" required />
-            
-                <label class="fs-field-label fs-anim-upper" for="q15">years old, and I currently live in </label>
-               
-                <input type="text" value="" placeholder="any city" class="fs-anim-lower" id="q15" name="q15" required data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" />
-                <br>
+                        <label class="fs-field-label fs-anim-upper" for="q1">My name is</label>
+                        <input type="text" value="" class="fs-anim-lower" id="q1" name="q1" placeholder="First" required/>
+                        <input type="text" value="" class="fs-anim-lower" id="q12" name="q12" placeholder="Middle" required />
+                        <input type="text" value="" class="fs-anim-lower" id="q13" name="q13" placeholder="Last" required /> .
+                        <br>
+                        <label class="fs-field-label fs-anim-upper" for="q14"> I'm</label>
+                        <input type="number" value="" placeholder="Age" min="10" max="90" class="fs-anim-lower" id="q14" name="q14" required />
+                        <label class="fs-field-label fs-anim-upper" for="q15">years old, and I currently live in </label>
+                        <!-- <input type="text" value="" placeholder="any city" class="fs-anim-lower" id="q15" name="q15" required data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" /> -->
+                        <select required name="q15" id="q15" onchange="showfield(this.options[this.selectedIndex].value)" class="cs-select cs-skin-underline">
+                            <option value="" disabled selected>Choose Area</option>
+                            <option value="Mohandeseen">Mohandeseen</option>
+                            <option value="Maadi">Maadi</option>
+                            <option value="Masr EL Gedeeda">Masr EL Gedeeda</option>
+                            <option value="Madinet Nasr">Madinet Nasr</option>
+                            <option value="Tagamoa">Tagamoa</option>
+                            <option value="Rehab">Rehab</option>
+                            <option value="Zamalek">Zamalek</option>
+                            <option value="Haram">Haram</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input type="text" value="" class="fs-anim-lower" id="q16" name="q16" placeholder="Enter Area or City" required /> .
+                        <br>
                     </li>
                     <li>
-                        <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">What's your email address?</label>
-                        <input class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="dean@road.us" required/>
+                        <label class="fs-field-label fs-anim-upper" for="q2" data-info="If you haven't attended any, just press continue">Almost <span style="color: red;">EIGHT</span> TEDx Events occur daily accross the globe.<span style="font-size:0.7em;"> Have you ever attended any TED/TEDx Events? Could you please list them? </span>
+                        </label>
+                        
+                        <input class="fs-anim-lower q2" id="q2" name="q2" type="text" placeholder="Event" />
+                        <label class="fs-field-label fs-anim-upper" for="q21" style="font-size: 0.7em;">by TEDx
+                        </label>
+                        <input class="fs-anim-lower q2" id="q21" name="q1" type="text" placeholder="e.g: GUC" />
+                        <span id="eventfield"></span>
+
+                        <button class = "fieldb" id= "fieldb" type="button" onclick="addInput()">Add another <button>
                     </li>
-                    <li data-input-trigger>
+                    <!-- <li data-input-trigger>
                         <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">What's your priority for your new website?</label>
                         <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
                             <span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Sell things</label></span>
                             <span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Become famous</label></span>
                             <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Mobile market</label></span>
                         </div>
+                    </li> -->
+                    <li>
+                        <label class="fs-field-label fs-anim-upper" for="q3">Why are you interested in attending our confrence?
+                        </label>
+                        
+                      <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
+                      <textarea class="fs-anim-lower" id ="q3"></textarea>
                     </li>
                     <li data-input-trigger>
                         <label class="fs-field-label fs-anim-upper" data-info="We'll make sure to use it all over">Choose a color for your website.</label>
@@ -98,28 +135,28 @@
             <!-- /fs-form -->
         </div>
         <!-- /fs-form-wrap -->
-      
     </div>
     <!-- /container -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./jquery/jquery.js"></script>
     <script src="./js/typed.min.js"></script>
-    <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
-    <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.ui.min.js"></script>
+    <!--   <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
+    <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.ui.min.js"></script> -->
+    <script src="./js/velocity.min.js"></script>
+    <script src="./js/velocity.ui.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/selectFx.js"></script>
     <script src="js/fullscreenForm.js"></script>
-     <script>
+    <script>
     function resizeInput() {
-    $(this).attr('size', $(this).val().length+4);
-}
+        $(this).attr('size', $(this).val().length + 4);
+    }
 
-$('input[type="text"]')
-    // event handler
-    .keyup(resizeInput)
-    // resize on page load
-    .each(resizeInput);
+    $('input[type="text"]')
+        // event handler
+        .keyup(resizeInput)
+        // resize on page load
+        .each(resizeInput);
     </script>
-
     <script>
     (function() {
         var formWrap = document.getElementById('fs-form-wrap');
@@ -149,7 +186,7 @@ $('input[type="text"]')
             backSpeed: 0,
             backDelay: 1000,
             callback: function() {
-                $("#nl-form")
+                $("#firstQ")
                     .velocity("fadeIn", {
                         display: "block",
                         delay: 500
@@ -158,7 +195,98 @@ $('input[type="text"]')
         });
     });
     </script>
+    <script>
+    function showfield(name) {
+        if (name == 'Other') {
+            $("#q16").velocity("fadeIn", {
+                display: "block"
+            })
+        } else {
 
+            $("#q16").velocity("fadeOut", {
+                display: "none"
+            })
+        }
+    }
+    </script>
+    <script>
+    $("#rect")
+        .delay(500)
+        .velocity({
+            x: "+=100",
+            y: "25%"
+        }, [250, 15])
+        .velocity({
+            fillGreen: 255,
+            strokeWidth: 4
+        }, {
+            loop: 1,
+            delay: 100
+        })
+        .velocity({
+            fillGreen: 255,
+            strokeWidth: 4
+        })
+        .velocity({
+            rotateZ: 90,
+            rotateX: 180,
+            scale: 2
+        }, {
+            duration: "slow"
+        })
+        .velocity({
+            x: "-=100",
+            y: "50%"
+        }, {
+            quque: false
+        }, [.5, .58, .28, .84])
+        .velocity("reverse", {
+            delay: 500
+        });
+
+    $("#arrowsvg")
+        .delay(500)
+        .velocity({
+            rotateZ: 90,
+            rotateX: 180
+        }, {
+            duration: 4000
+        });
+    // .velocity({ rotateZ: 90, rotateX:180, scale:2 },{duration:"slow"})
+    // .velocity("reverse", { delay: 500 });
+    </script>
+<script>
+var countBox =1;
+var boxName = 0;
+function addInput()
+{
+     var boxName="textBox"+countBox; 
+document.getElementById('eventfield').innerHTML+='<br/><input class="fs-anim-lower q2" name="q2" type="text" placeholder="Event"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/><label class="fs-field-label fs-anim-upper" for="q21" style="font-size: 0.7em;"> by TEDx </label> <input class="fs-anim-lower q2"  name="q1" type="text" placeholder="e.g: GUC"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/>';
+     countBox += 1;
+}
+</script>
+<script>
+   var span = $('<span>').css('display','inline-block')
+.css('word-break','break-all').appendTo('body').css('visibility','hidden');
+function initSpan(textarea){
+  span.text(textarea.text())
+      .width(textarea.width())      
+      .css('font',textarea.css('font'));
+}
+$('textarea').on({
+    input: function(){
+      var text = $(this).val();      
+      span.text(text);      
+      $(this).height(text ? span.height() : '1.1em');
+    },
+    focus: function(){
+     initSpan($(this));
+    },
+    keypress: function(e){
+        if(e.which == 13) e.preventDefault();
+    }
+});
+    </script>
 </body>
 
 </html>
