@@ -237,13 +237,13 @@
                         break;
 
                         /*
-					// for our custom select we would do something like:
-					case 'div' : 
-						[].slice.call( fld.querySelectorAll( 'ul > li' ) ).forEach( function( inp ) {
-							inp.addEventListener( 'click', function(ev) { self._nextField(); } );
-						} ); 
-						break;
-					*/
+                    // for our custom select we would do something like:
+                    case 'div' : 
+                        [].slice.call( fld.querySelectorAll( 'ul > li' ) ).forEach( function( inp ) {
+                            inp.addEventListener( 'click', function(ev) { self._nextField(); } );
+                        } ); 
+                        break;
+                    */
                 }
             }
         });
@@ -310,14 +310,24 @@
                     display: "block"
                 })
             $("#weight2")
-                .delay(3000)
+                .delay(2000)
+                .velocity({
+                    transformOriginX: 150,
+                    transformOriginY: 280
+                })
                 .velocity({
                     translateY: 440
                 }, {
                     duration: 800
+                })
+                .velocity({
+                    rotateZ: -30
+                }, {
+                    duration: 400
                 });
+
             $("#bar")
-                .delay(3000)
+                .delay(2000)
                 .velocity({
                     transformOriginX: 170,
                     transformOriginY: 505
@@ -328,22 +338,45 @@
                     duration: 1000
                 });
             $("#box")
-                .delay(3600)
+                .delay(2600)
                 .velocity({
                     translateY: -600
                 }, {
                     duration: 1400
                 });
-            $("#weight2")
+
+        }
+        if (currField == 1) {
+            $("#weightPivotDiv")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+            $("#barBallDiv")
+                .velocity("fadeIn", {
+                    display: "block"
+                });
+            $("#verticalbar")
+                .delay(1000)
                 .velocity({
-                    transformOriginX: 170,
-                    transformOriginY: 505
+                    transformOriginX: 138,
+                    transformOriginY: 380
                 })
                 .velocity({
-                    rotateZ: -30
+                    rotateZ: 85
                 }, {
-                    duration: 400
+                    duration: 500
+                })
+                .velocity("reverse", {
+                    delay: 200
                 });
+            $("#ballz")
+                .delay(1600)
+                .velocity({
+                    translateX: 150
+                }, {
+                    duration: 2000
+                })
         }
         currField++;
         this.isAnimating = true;
@@ -532,9 +565,16 @@
                     if (!checked) {
                         error = 'NOVAL';
                     }
-                } else if (input[z].value === '') {
+                } else if (input[z].value === '' && input[z].type == 'text') {
                     error = 'NOVAL';
+                } else if (input[z].type == 'number' && input[z].value === "") {
+                    console.log(input[z]);
+                    error = 'INVALIDNUMBER'
+                } else if (input[z].type == 'email' && (input[z].validity) && (!input[z].validity.valid)) {
+                    console.log(input[z]);
+                    error = 'INVALIDEMAIL'
                 }
+
             }
         }
         if (textfield) {
@@ -573,6 +613,10 @@
             case 'INVALIDEMAIL':
                 message = 'Please fill in a valid email address';
                 break;
+            case 'INVALIDNUMBER':
+                message = 'Please enter a valid age';
+                break;
+
                 // ...
         };
         this.msgError.innerHTML = message;

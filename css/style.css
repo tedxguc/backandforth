@@ -18,6 +18,15 @@
     min-width: 18%;
 }
 
+#q8,
+#q81
+{
+    display: inline-block;
+    width: auto;
+    font-size: 0.8em;
+    min-width: 25%;
+}
+
 #q21,
 #q2 {
     display: inline-block;
@@ -56,14 +65,14 @@
 
 #firstQ {
     display: none;
-    font-size: 0.7em;
+    font-size: 0.8em;
   /*  position: absolute;
     top: -140px;*/
 }
 
 #fieldb {
     display: inline-block;
-    font-size: 0.4em;
+    font-size: 0.5em;
 }
 
 #fieldb:hover:after {
@@ -73,7 +82,7 @@
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
 }
-
+#barBallDiv,
 #weightsvg2,
 #pivotsvg {
 	display: none;

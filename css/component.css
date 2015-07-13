@@ -745,6 +745,7 @@ button.fs-continue:hover {
 
 .fs-form li.fs-current {
     visibility: visible;
+    font-size: 0.8em;
 }
 
 .fs-form li.fs-hide,

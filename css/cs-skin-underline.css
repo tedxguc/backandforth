@@ -3,6 +3,7 @@
 div.cs-skin-underline {
 	background: transparent;
 	max-width: 400px;
+	font-size: 0.8em;
 }
 
 @media screen and (max-width: 30em) {

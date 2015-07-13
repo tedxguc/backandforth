@@ -27,6 +27,7 @@ body {
 	overflow: hidden;
 	overflow-y: scroll;
 	min-height: 590px;
+	height: 100%;
 	
 }
 
