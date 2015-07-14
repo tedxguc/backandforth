@@ -80,21 +80,23 @@
             </svg>
         </div>
         <div class="fs-form-wrap" id="fs-form-wrap">
-            <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
+{window.location.href ='./complete.html';}"></iframe>
+            <form id="myform" class="fs-form fs-form-full" autocomplete="off" action="https://docs.google.com/forms/d/1sDHwF5Dj6ilw1-FN2PvfdSltJGI76PC6vn6GVzSbnR0/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                 <ol class="fs-fields">
                     <li id="firstQ">
                         <!--     <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
                         <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/> -->
-                        <label class="fs-field-label fs-anim-upper" for="q1">My name is</label>
-                        <input type="text" value="" class="fs-anim-lower" id="q1" name="q1" placeholder="First" required/>
-                        <input type="text" value="" class="fs-anim-lower" id="q12" name="q12" placeholder="Middle" required />
-                        <input type="text" value="" class="fs-anim-lower" id="q13" name="q13" placeholder="Last" required /> .
+                        <label class="fs-field-label fs-anim-upper" for="entry_1736428974">My name is</label>
+                        <input type="text" value="" class="fs-anim-lower" id="q1" name="entry.1736428974" placeholder="First" required/>
+                        <input type="text" value="" class="fs-anim-lower" id="q12" name="entry.1736428974" placeholder="Middle" required />
+                        <input type="text" value="" class="fs-anim-lower" id="q13" name="entry.1736428974" placeholder="Last" required /> .
                         <br>
                         <label class="fs-field-label fs-anim-upper" for="q14"> I'm</label>
-                        <input type="number" value="" placeholder="Age" class="fs-anim-lower" id="q14" name="q14" required />
+                        <input type="number" value="" placeholder="Age" class="fs-anim-lower" id="q14" name="entry.671873884" required />
                         <label class="fs-field-label fs-anim-upper" for="q15">years old, and I currently live in </label>
                         <!-- <input type="text" value="" placeholder="any city" class="fs-anim-lower" id="q15" name="q15" required data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" /> -->
-                        <select required name="q15" id="q15" onchange="showfield(this.options[this.selectedIndex].value)" class="cs-select cs-skin-underline">
+                        <select required name="entry.1405986661" id="q15" onchange="showfield(this.options[this.selectedIndex].value)" class="cs-select cs-skin-underline">
                             <option value="" disabled selected>Choose Area *</option>
                             <option value="Mohandeseen">Mohandeseen</option>
                             <option value="Maadi">Maadi</option>
@@ -112,10 +114,10 @@
                     <li>
                         <label class="fs-field-label fs-anim-upper" for="q2" data-info="If you haven't attended any, just press continue">Almost <span style="color: red;">EIGHT</span> TEDx Events occur daily accross the globe.<span style="font-size:0.7em;"> Have you ever attended any TED/TEDx Events? Could you please list them? </span>
                         </label>
-                        <input class="fs-anim-lower q2" id="q2" name="q2" type="text" placeholder="Event" />
+                        <input class="fs-anim-lower q2" id="q2" name="entry.1539398248" type="text" placeholder="Event" />
                         <label class="fs-field-label fs-anim-upper" for="q21" style="font-size: 0.7em;">by TEDx
                         </label>
-                        <input class="fs-anim-lower q2" id="q21" name="q1" type="text" placeholder="e.g: GUC" />
+                        <input class="fs-anim-lower q2" id="q21" name="entry.1539398248" type="text" placeholder="e.g: GUC" />
                         <span id="eventfield"></span>
                         <button class="fieldb" id="fieldb" type="button" onclick="addInput()">Add another
                             <button>
@@ -132,48 +134,60 @@
                         <label class="fs-field-label fs-anim-upper" for="q3" required>Why are you interested in attending our confrence?
                         </label>
                         <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
-                        <textarea class="fs-anim-lower" id="q3" name="q3" value="" required></textarea>
+                        <textarea class="fs-anim-lower" id="q3" name="entry.1866958370" value="" required></textarea>
                     </li>
                     <li>
                         <label class="fs-field-label fs-anim-upper" for="q4" required>What do you think you'll benefit/gain out from attending the confrence?
                         </label>
                         <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
-                        <textarea class="fs-anim-lower" id="q4" name="q4" value="" required></textarea>
+                        <textarea class="fs-anim-lower" id="q4" name="entry.1841985040" value="" required></textarea>
                     </li>
                     <li>
                         <label class="fs-field-label fs-anim-upper" for="q5" id="q5label">3 years ago, TED talks had been watched over one billion times worldwide, And till this day they continue to inspire and provide the community with new perspectives and ideas. We'd like to know the name of one talk that you especially loved.
                         </label>
-                        <input class="fs-anim-lower" id="q5" name="q5" type="text" placeholder="Talk Name" />
+                        <input class="fs-anim-lower" id="q5" name="entry.1887809403" type="text" placeholder="Talk Name" />
                     </li>
                     <li>
                         <label class="fs-field-label fs-anim-upper" for="q6" required>Why exactly did that particular talk inspire you?
                         </label>
                         <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
-                        <textarea class="fs-anim-lower" id="q6"></textarea>
+                        <textarea class="fs-anim-lower" name="entry.757939116" id="q6"></textarea>
                     </li>
                     <li data-input-trigger>
                         <label class="fs-field-label fs-anim-upper" for="q7" required>Don't worry, you're almost done. We just need this little piece of information. Are you a student?</label>
                         <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-                            <span><input id="q7" name="q7" type="radio" value="Yes" required/><label for="q7" >Yes</label></span>
-                            <span><input id="q71" name="q71" type="radio" value="No" required/><label for="q71" >No</label></span>
+                            <span><input id="q7" name="entry.1403308581" type="radio" value="Yes"/><label for="q7" >Yes</label></span>
+                            <span><input id="q71" name="entry.1403308581" type="radio" value="No"/><label for="q71" >No</label></span>
                         </div>
                     </li>
                     <li>
                         <label class="fs-field-label fs-anim-upper" for="q8">My Phone Number</label>
-                        <input type="text" value="" class="fs-anim-lower" id="q8" name="q8" placeholder="number" required/>
+                        <input type="text" value="" class="fs-anim-lower" id="q8" name="entry.1231631324" placeholder="number" required/>
                         <br>
                         <label class="fs-field-label fs-anim-upper" for="q81"> My Email</label>
-                        <input type="email" value="" placeholder="tedx@guc.com" class="fs-anim-lower" id="q81" name="q91" required/>
+                        <input type="email" value="" placeholder="tedx@guc.com" class="fs-anim-lower" id="q81" name="entry.1633621508" required/>
                     </li>
                 </ol>
                 <!-- /fs-fields -->
-                <button class="fs-submit" type="submit">Send answers</button>
+                <button class="fs-submit" type="submit" name="submit" id="ss-submit" value="Submit">Send answers</button>
             </form>
             <!-- /fs-form -->
         </div>
         <!-- /fs-form-wrap -->
     </div>
     <!-- /container -->
+ <!--    <footer id="footer">
+        <div class="footer-container"><img class="aboutImg" src="img/footerlogo.png" />
+            <p>
+                This independent TEDx event is operated under license from <a href="http://www.ted.com" class="external-link" title="External link: TED Homepage ted.com, opens in a new window.">TED</a>.
+                <br/>
+                <br/> Designed by <a target="_blank" href="">Mohamed Hazem,</a> <a target="_blank" href="">Nourhan Ayman </a>developed by <a href="mailto:omarkamal95@gmail.com">Omar Mahmoud</a></p>
+            <div class="socialMedia">
+                <a target="_blank" href="http://www.facebook.com/TEDxGUC"><img src="imgs/fb.png" /></a>
+                <a target="_blank" href="https://twitter.com/TEDxGUC"><img src="img/twitter.png" /></a>
+            </div>
+        </div>
+    </footer> -->
     <script src="./jquery/jquery.js"></script>
     <script src="./js/typed.min.js"></script>
     <!--   <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
@@ -217,36 +231,51 @@
     <script>
     $(function() {
         $(".greeting").typed({
-            // strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this appliction.", "Let's start by some <strong> Basic Information</strong>."],
-            strings: ["hi"],
+            strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this appliction.", "Let's start by some <strong> Basic Information</strong>."],
+            // strings: ["hi"],
             typeSpeed: 0,
-            backSpeed: 0,
+            backSpeed: -50,
             backDelay: 1000,
             callback: function() {
-                $("#firstQ")
+            	$(".fs-title")
+            	.velocity({
+            		translateY: -280
+            	},
+            	{
+            		duration: 500
+            	});
+                $("#fs-form-wrap")
+                    .velocity("fadeIn", {
+                        display: "block",
+                        delay: 500
+                    });
+                     $("#arrowWeightDiv")
                     .velocity("fadeIn", {
                         display: "block",
                         delay: 500
                     });
                 $("#arrow")
-                    .delay(1000)
+                    .delay(2000)
                     .velocity({
                         translateX: -10
                     }, {
                         duration: 1000
                     })
                     .velocity({
-                        translateX: 1158
+                        translateX: 1180
                     }, {
                         duration: 600
                     });
                 $("#weight")
-                    .delay(2400)
+                    .delay(3400)
                     .velocity({
                         translateY: 1500
                     }, {
                         duration: 1000
                     });
+                $("body")
+                    .delay(3500)
+                    .velocity("callout.swing");
             },
         });
     });
@@ -271,7 +300,7 @@
 
     function addInput() {
         var boxName = "textBox" + countBox;
-        document.getElementById('eventfield').innerHTML += '<br/><input class="fs-anim-lower q2" name="q2" type="text" placeholder="Event"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/><label class="fs-field-label fs-anim-upper" for="q21" style="font-size: 0.7em;"> by TEDx </label> <input class="fs-anim-lower q2"  name="q1" type="text" placeholder="e.g: GUC"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/>';
+        document.getElementById('eventfield').innerHTML += '<br/><input class="fs-anim-lower q2" name="entry.1539398248" type="text" placeholder="Event"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/><label class="fs-field-label fs-anim-upper" for="q21" style="font-size: 0.7em;"> by TEDx </label> <input class="fs-anim-lower q2"  name="entry.1539398248" type="text" placeholder="e.g: GUC"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/>';
         countBox += 1;
     }
     </script>

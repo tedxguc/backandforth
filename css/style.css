@@ -63,11 +63,8 @@
     min-width: 18%;
 }
 
-#firstQ {
-    display: none;
-    font-size: 0.8em;
-  /*  position: absolute;
-    top: -140px;*/
+#fs-form-wrap {
+    display: none;  
 }
 
 #fieldb {
@@ -82,6 +79,8 @@
     -webkit-transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
 }
+
+#arrowWeightDiv,
 #barBallDiv,
 #weightsvg2,
 #pivotsvg {
@@ -95,3 +94,8 @@ textarea {
     height: 1.1em;
     padding: 2px;
 }
+/*.greeting{
+    position: absolute; 
+    top: 50%;
+}*/
+

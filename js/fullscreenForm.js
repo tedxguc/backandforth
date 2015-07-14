@@ -357,7 +357,7 @@
                     display: "block"
                 });
             $("#verticalbar")
-                .delay(2000)
+                .delay(1200)
                 .velocity({
                     transformOriginX: 138,
                     transformOriginY: 380
@@ -371,18 +371,18 @@
                     delay: 200
                 });
             $("#ballz")
-                .delay(2600)
+                .delay(1800)
                 .velocity({
-                    translateX: 150
+                    translateX: 170
                 }, {
                     duration: 2000
                 });
             $("#box2")
                 .delay(700)
                 .velocity({
-                    translateY: -600
+                    translateY: -800
                 }, {
-                    duration: "slow",
+                    duration: 5000,
                     easing: [ .44,.97,.81,.79 ]
                 });
         }

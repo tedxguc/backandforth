@@ -14,7 +14,7 @@
 
 .fs-title {
     position: absolute;
-    top: 0;
+    top: 40%;
     left: 0;
     margin: 0;
     padding: 40px;
@@ -52,9 +52,9 @@
     padding: 2.5em 30% 6em;
     width: 100%;
     height: 100%;
-    background: #fffed8;
+    background: #FFFFFF;
     color: #3b3f45;
-    font-size: 1.2em;
+    font-size: 1.8em;
 }
 
 .fs-form-overview .fs-fields::before {
@@ -271,7 +271,6 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields input {
-    border-bottom-color: transparent;
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -287,7 +286,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields input:focus {
-    background-color: #fffed8;
+    background-color: #FFFFFF;
     /* Fixes chrome bug with placeholder */
 }
 
@@ -398,8 +397,7 @@ button.fs-continue,
 }
 
 .fs-form-overview .fs-fields textarea {
-    height: 100px;
-    color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
 }
 
 .fs-fields textarea:focus {
@@ -408,11 +406,10 @@ button.fs-continue,
 
 .fs-form-overview .fs-fields textarea {
     padding: 0;
-    border-color: transparent;
 }
 
 .fs-form-overview .fs-fields textarea:focus {
-    background: #fffed8;
+    background: #FFFFFF;
 }
 
 .fs-form div.cs-select.cs-skin-boxes {
@@ -475,11 +472,12 @@ button.fs-continue,
 
 .fs-nav-dots {
     position: absolute;
-    top: 50%;
-    right: 60px;
+    top: -5%;
+    right: 50%;
     left: auto;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    transform: rotate(-90deg);
 }
 
 .fs-nav-dots button {
