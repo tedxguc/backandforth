@@ -19,8 +19,7 @@
 }
 
 #q8,
-#q81
-{
+#q81 {
     display: inline-block;
     width: auto;
     font-size: 0.8em;
@@ -64,7 +63,31 @@
 }
 
 #fs-form-wrap {
-    display: none;  
+    display: none;
+}
+
+.q2 {
+    display: inline-block !important;
+    width: 27% !important;
+    font-size: 0.7em !important;
+    min-width: 21%;
+}
+
+.q2label {
+    font-size: 0.7em;
+}
+
+#talkwhy {
+    display: none;
+    position: absolute;
+    top: 150%;
+    font-size: 0.7em;
+}
+
+#gucian {
+    display: none;
+    position: absolute;
+    top: 130%;
 }
 
 #fieldb {
@@ -84,8 +107,9 @@
 #barBallDiv,
 #weightsvg2,
 #pivotsvg {
-	display: none;
+    display: none;
 }
+
 textarea {
     width: 200px;
     resize: none;
@@ -98,4 +122,3 @@ textarea {
     position: absolute; 
     top: 50%;
 }*/
-

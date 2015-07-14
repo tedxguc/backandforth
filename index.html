@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fullscreen Form Interface</title>
+    <title>Back and Forth - TEDxGUC</title>
     <meta name="description" content="Fullscreen Form Interface: A distraction-free form concept with fancy animations" />
     <meta name="keywords" content="fullscreen form, css animations, distraction-free, web design" />
     <meta name="author" content="Codrops" />
@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="js/modernizr.custom.js"></script>
+    <script>var submitted = false;</script>
 </head>
 
 <body>
@@ -96,7 +97,7 @@
                         <input type="number" value="" placeholder="Age" class="fs-anim-lower" id="q14" name="entry.671873884" required />
                         <label class="fs-field-label fs-anim-upper" for="q15">years old, and I currently live in </label>
                         <!-- <input type="text" value="" placeholder="any city" class="fs-anim-lower" id="q15" name="q15" required data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" /> -->
-                        <select required name="entry.1405986661" id="q15" onchange="showfield(this.options[this.selectedIndex].value)" class="cs-select cs-skin-underline">
+                        <select required name="entry.1405986661" id="q15" class="cs-select cs-skin-underline">
                             <option value="" disabled selected>Choose Area *</option>
                             <option value="Mohandeseen">Mohandeseen</option>
                             <option value="Maadi">Maadi</option>
@@ -108,6 +109,7 @@
                             <option value="Haram">Haram</option>
                             <option value="Other">Other</option>
                         </select>
+                        <!-- <input type="text" value="" placeholder="Area" class="fs-anim-lower" id="q16" name="entry.1405986661" required /> -->
                         <!-- <input type="text" value="" class="fs-anim-lower" id="q16" name="q16" placeholder="Enter Area or City" required /> . -->
                         <br>
                     </li>
@@ -142,22 +144,30 @@
                         <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
                         <textarea class="fs-anim-lower" id="q4" name="entry.1841985040" value="" required></textarea>
                     </li>
-                    <li>
-                        <label class="fs-field-label fs-anim-upper" for="q5" id="q5label">3 years ago, TED talks had been watched over one billion times worldwide, And till this day they continue to inspire and provide the community with new perspectives and ideas. We'd like to know the name of one talk that you especially loved.
+                    <li id="talkli">
+                        <label class="fs-field-label fs-anim-upper" for="q5" id="q5label"><span style="font-size:0.75em;">TED talks have been watched over <span style="color: red;">one billion</span> times worldwide, And till this day they continue to inspire and provide the community with new perspectives and ideas.</span>
+                            <br> We'd like to know the name of one talk that you especially loved.
                         </label>
                         <input class="fs-anim-lower" id="q5" name="entry.1887809403" type="text" placeholder="Talk Name" />
+                        <div id="talkwhy">
+                            <label class="fs-field-label fs-anim-upper" for="q6" required>Why exactly did that particular talk inspire you?
+                            </label>
+                            <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
+                            <textarea class="fs-anim-lower" name="entry.757939116" id="q6"></textarea>
+                        </div>
                     </li>
                     <li>
-                        <label class="fs-field-label fs-anim-upper" for="q6" required>Why exactly did that particular talk inspire you?
-                        </label>
-                        <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
-                        <textarea class="fs-anim-lower" name="entry.757939116" id="q6"></textarea>
-                    </li>
-                    <li data-input-trigger>
                         <label class="fs-field-label fs-anim-upper" for="q7" required>Don't worry, you're almost done. We just need this little piece of information. Are you a student?</label>
                         <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-                            <span><input id="q7" name="entry.1403308581" type="radio" value="Yes"/><label for="q7" >Yes</label></span>
+                            <span><input id="q7" name="entry.1403308581" type="radio" value="Yes" required/><label for="q7" >Yes</label></span>
                             <span><input id="q71" name="entry.1403308581" type="radio" value="No"/><label for="q71" >No</label></span>
+                        </div>
+                        <div id="gucian">
+                            <label class="fs-field-label fs-anim-upper" for="q72" required>Are you a<strong> GUC</strong> student?</label>
+                            <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+                                <span><input id="q72" name="entry.111812337" type="radio" value="Yes" required/><label for="q2" >Yes</label></span>
+                                <span><input id="q73" name="entry.111812337" type="radio" value="No"/><label for="q73" >No</label></span>
+                            </div>
                         </div>
                     </li>
                     <li>
@@ -176,7 +186,7 @@
         <!-- /fs-form-wrap -->
     </div>
     <!-- /container -->
- <!--    <footer id="footer">
+    <!--    <footer id="footer">
         <div class="footer-container"><img class="aboutImg" src="img/footerlogo.png" />
             <p>
                 This independent TEDx event is operated under license from <a href="http://www.ted.com" class="external-link" title="External link: TED Homepage ted.com, opens in a new window.">TED</a>.
@@ -197,6 +207,63 @@
     <script src="js/classie.js"></script>
     <script src="js/selectFx.js"></script>
     <script src="js/fullscreenForm.js"></script>
+  <!--  <script>
+    $("#q15").on('change',function() {
+    	console.log("aho2");
+        if ($(this).val() === "Other") {
+        	console.log("aho");
+            $("#q16")
+                .velocity("fadeIn", {
+                    display: "inline-block"
+                });
+        } else{
+        	.velocity("fadeOut", {
+                    display: "none"
+                });
+        }
+    })
+    </script>-->
+    <script>
+    var check = true;
+
+    function showWhy() {
+        if ($(this).val().length > 0) {
+            if (check) {
+                $("#talkwhy")
+                    .velocity("fadeIn", {
+                        display: "block"
+                    });
+                check = false;
+            }
+        } else {
+            $("#talkwhy")
+                .velocity("fadeOut", {
+                    display: "none"
+                });
+            check = true;
+        }
+    }
+    $('#q5')
+        .keyup(showWhy)
+    </script>
+    <script>
+    $('input[name="entry.1403308581"]').change(function() {
+        if ($(this).val() == 'Yes' && $(this).is(":checked")) {
+            console.log("aho");
+
+            $("#gucian")
+                .velocity("fadeIn", {
+                    display: "block"
+                });
+        } else {
+            console.log("notaho");
+            $("#gucian")
+                .velocity("fadeOut", {
+                    display: "none"
+                });
+        }
+    });
+    </script>
     <script>
     function resizeInput() {
         $(this).attr('size', $(this).val().length + 4);
@@ -231,31 +298,31 @@
     <script>
     $(function() {
         $(".greeting").typed({
-            strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this appliction.", "Let's start by some <strong> Basic Information</strong>."],
-            // strings: ["hi"],
+            // strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this appliction.", "Let's start by some <strong> Basic Information</strong>."],
+            strings: ["hi"],
             typeSpeed: 0,
             backSpeed: -50,
             backDelay: 1000,
             callback: function() {
-            	$(".fs-title")
-            	.velocity({
-            		translateY: -280
-            	},
-            	{
-            		duration: 500
-            	});
+                $(".fs-title")
+                    .delay(500)
+                    .velocity({
+                        translateY: -280
+                    }, {
+                        duration: 500
+                    });
                 $("#fs-form-wrap")
                     .velocity("fadeIn", {
                         display: "block",
                         delay: 500
                     });
-                     $("#arrowWeightDiv")
+                $("#arrowWeightDiv")
                     .velocity("fadeIn", {
                         display: "block",
                         delay: 500
                     });
                 $("#arrow")
-                    .delay(2000)
+                    .delay(2500)
                     .velocity({
                         translateX: -10
                     }, {
@@ -267,40 +334,53 @@
                         duration: 600
                     });
                 $("#weight")
-                    .delay(3400)
+                    .delay(3900)
                     .velocity({
                         translateY: 1500
                     }, {
                         duration: 1000
                     });
                 $("body")
-                    .delay(3500)
+                    .delay(4000)
                     .velocity("callout.swing");
             },
         });
     });
     </script>
-    <script>
-    function showfield(name) {
-        if (name == 'Other') {
-            $("#q16").velocity("fadeIn", {
-                display: "block"
-            })
-        } else {
-
-            $("#q16").velocity("fadeOut", {
-                display: "none"
-            })
-        }
-    }
-    </script>
+   
     <script>
     var countBox = 1;
     var boxName = 0;
 
     function addInput() {
+        // var boxName = "textBox" + countBox;
+        // document.getElementById('eventfield').innerHTML += '<br><input class="fs-anim-lower q2" name="entry.1539398248" value="" type="text" placeholder="Event"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/><label class="fs-field-label fs-anim-upper" for="q21'+countBox+'" style="font-size: 0.7em;"> by TEDx </label> <input class="fs-anim-lower q2"  name="entry.1539398248" type="text" placeholder="e.g: GUC"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/>';
+        // countBox += 1;
+
         var boxName = "textBox" + countBox;
-        document.getElementById('eventfield').innerHTML += '<br/><input class="fs-anim-lower q2" name="entry.1539398248" type="text" placeholder="Event"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/><label class="fs-field-label fs-anim-upper" for="q21" style="font-size: 0.7em;"> by TEDx </label> <input class="fs-anim-lower q2"  name="entry.1539398248" type="text" placeholder="e.g: GUC"  style="display: inline-block;width: 27%;font-size:0.7em;min-width: 21%;"/>';
+        var input = document.createElement('input');
+        input.name = "entry.1539398248";
+        input.className = "fs-anim-lower q2";
+        input.type = "text";
+        input.placeholder = "Event";
+
+        var input2 = document.createElement('input');
+        input2.name = "entry.1539398248";
+        input2.className = "fs-anim-lower q2";
+        input2.type = "text";
+        input2.placeholder = "e.g: GUC";
+
+        var label = document.createElement('label');
+        label.className = "fs-field-label fs-anim-upper q2label";
+        label.innerHTML = " by TEDx "
+
+        var parent = document.getElementById('eventfield');
+        parent.appendChild(document.createElement('br'));
+        parent.appendChild(input);
+        parent.appendChild(label);
+        parent.appendChild(input2)
+
+        // create/add other elements...
         countBox += 1;
     }
     </script>

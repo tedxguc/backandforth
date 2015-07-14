@@ -54,7 +54,7 @@
     height: 100%;
     background: #FFFFFF;
     color: #3b3f45;
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 
 .fs-form-overview .fs-fields::before {
@@ -184,6 +184,14 @@ button.fs-continue,
     padding: 0 0 2em 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
+
+/*.fs-form-overview .fs-fields > li#talkli ,
+.no-js .fs-form .fs-fields > li#talkli {
+    margin: 1em 0 2em;
+    padding: 0 0 2em 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    height: 400px;
+}*/
 /* Labels & info */
 
 .fs-fields > li label {
@@ -719,7 +727,7 @@ button.fs-continue:hover {
 
 .fs-message-error {
     position: absolute;
-    bottom: 75%;
+    bottom: 70%;
     left: 50%;
     z-index: 800;
     max-width: 960px;
@@ -892,7 +900,7 @@ input[type=text]::-ms-clear {
         top: 0;
         right: 0;
         padding: 1.5em 1em 8em 1em;
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     .fs-title {
         text-align: center;

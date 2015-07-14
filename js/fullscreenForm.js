@@ -321,13 +321,19 @@
                     duration: 800
                 })
                 .velocity({
-                    rotateZ: -30
+                    translateY: [460,440]
                 }, {
-                    duration: 400
-                });
+                    duration: 1000
+                })
+                // .velocity({
+                //     rotateZ: -30
+                // }, {
+                //     duration: 400
+                // })
+                ;
 
             $("#bar")
-                .delay(2000)
+                .delay(2400)
                 .velocity({
                     transformOriginX: 170,
                     transformOriginY: 505
@@ -338,7 +344,7 @@
                     duration: 1000
                 });
             $("#box")
-                .delay(2600)
+                .delay(3000)
                 .velocity({
                     translateY: -600
                 }, {
