@@ -25,6 +25,8 @@
 
 <body>
     <div class="container">
+        <div class="md-modal md-effect-7" id="modal-7">
+        </div>
         <div class="fs-title">
             <div class="greeting" style="white-space:pre">
             </div>
@@ -106,7 +108,7 @@
                 </g>
             </svg>
         </div>
-        <div id="buttonpress">
+        <div id="buttonpress" style="width:100%; position: absolute;">
             <svg id="ballsvg3">
                 <g id="ball2" transform="scale(1.5)">
                     <g id="ballz3">
@@ -116,11 +118,13 @@
                     </g>
                 </g>
             </svg>
-            <svg id="button">
-                <g id="layer1" fill-rule="nonzero" transform="scale(2)" fill="#F33">
-                    <path id="path306" d="m719.86,1024.6c2.1738,0,3.9362,2.8925,3.9362,6.4612,0,3.5688-1.7625,6.4613-3.9362,6.4613-2.1738,0-3.935-2.8925-3.935-6.4613,0-3.5687,1.7612-6.4612,3.935-6.4612" />
-                    <path id="path310" d="m727.37,1024.3,0,13.475c1.4012-1.6725,2.2812-4.07,2.2812-6.7387,0-2.6663-0.88-5.0638-2.2812-6.7363" />
-                    <path id="path314" d="m721.65,1024.3c1.2612,1.6875,2.6075,4.2038,2.6075,6.7638s-1.3462,4.8787-2.6075,6.5662h5.7425v-13.134l-5.7425-0.1963z" />
+            <svg id="buttonsvg" width="100%" height="100%">
+                <g fill-rule="nonzero" transform="translate(-726.92338,-1185.3217) scale(2)" fill="#F33">
+                    <g id="buttonz">
+                        <path id="path306" d="m719.86,1024.6c2.1738,0,3.9362,2.8925,3.9362,6.4612,0,3.5688-1.7625,6.4613-3.9362,6.4613-2.1738,0-3.935-2.8925-3.935-6.4613,0-3.5687,1.7612-6.4612,3.935-6.4612" />
+                        <path id="path310" d="m727.37,1024.3,0,13.475c1.4012-1.6725,2.2812-4.07,2.2812-6.7387,0-2.6663-0.88-5.0638-2.2812-6.7363" />
+                        <path id="path314" d="m721.65,1024.3c1.2612,1.6875,2.6075,4.2038,2.6075,6.7638s-1.3462,4.8787-2.6075,6.5662h5.7425v-13.134l-5.7425-0.1963z" />
+                    </g>
                 </g>
             </svg>
         </div>
@@ -342,8 +346,8 @@
     <script>
     $(function() {
         $(".greeting").typed({
-            strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this appliction.", "Let's start by some <strong> Basic Information</strong>."],
-            // strings: ["hi"],
+            // strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this appliction.", "Let's start by some <strong> Basic Information</strong>."],
+            strings: ["hi"],
             typeSpeed: 0,
             backSpeed: -50,
             backDelay: 1000,

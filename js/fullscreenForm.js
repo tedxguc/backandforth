@@ -451,6 +451,34 @@
 
                     display: "block"
                 });
+
+            $("#ballz3")
+                .velocity({
+                    translateX: "66.5vw"
+                }, {
+                    duration: 4800,
+                    delay: 1000,
+                    easing: [.47, .68, .84, .99]
+
+                })
+                .velocity({
+                    translateX: "65vw"
+                }, {
+                    duration: 500,
+                    delay: 5800,
+                    easing: [.47, .68, .84, .99],
+                    queue: false
+
+                }) ;
+            $("#buttonz")
+                .velocity({
+                    translateX: 5
+                }, {
+                    duration: 200,
+                    delay: 5600,
+                    queue: false
+
+                });
         }
         currField++;
         this.isAnimating = true;
