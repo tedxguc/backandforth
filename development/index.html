@@ -10,13 +10,17 @@
     <meta name="keywords" content="fullscreen form, css animations, distraction-free, web design" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
+<!-- build:css css/vendor.css -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-skin-underline.css" />
     <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+<!-- endbuild -->
+<!-- build:css css/style.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endbuild -->
     <script src="js/modernizr.custom.js"></script>
     <script>
     var submitted = false;
@@ -250,12 +254,8 @@
             </div>
         </div>
     </footer> -->
-    <script src="./jquery/jquery.js"></script>
-    <script src="./js/typed.min.js"></script>
-    <!--   <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
-    <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.ui.min.js"></script> -->
-    <script src="./js/velocity.min.js"></script>
-    <script src="./js/velocity.ui.min.js"></script>
+    <!-- build:js js/vendor.js -->
+    
     <script>
     var isMobile = false; //initiate as false
     // device detection
@@ -267,6 +267,7 @@
     <script src="js/classie.js"></script>
     <script src="js/selectFx.js"></script>
     <script src="js/fullscreenForm.js"></script>
+    <!-- endbuild -->
     <!--  <script>
     $("#q15").on('change',function() {
     	console.log("aho2");
