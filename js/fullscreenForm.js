@@ -296,7 +296,7 @@
                 //     transformOriginY: 280
                 // })
                 .velocity({
-                    translateY: 440
+                    translateY: 450
                 }, {
                     duration: 900
                 })
@@ -310,16 +310,15 @@
                 }, {
                     queue: false,
                     duration: 600,
-                    delay:2700
+                    delay: 2700
                 })
-                 .velocity({
+                .velocity({
                     translateY: 440
                 }, {
                     duration: 900,
-                     delay:2800,
-                     queue: false
-                })
-                ;
+                    delay: 2800,
+                    queue: false
+                });
 
             $("#bar")
                 .delay(2100)
@@ -368,17 +367,24 @@
             $("#ballz")
                 .delay(1800)
                 .velocity({
-                    translateX: 170
+                    translateX: 180
                 }, {
                     duration: 2000
                 });
             $("#box2")
                 .delay(700)
                 .velocity({
-                    translateY: -800
+                    translateY: -900
                 }, {
-                    duration: 5000,
-                    easing: [ .44,.97,.81,.79 ]
+                    duration: 4200,
+                    easing: [.44, .97, .81, .79]
+                });
+        }
+        if (currField == 2) {
+            $("#weightPivotDiv")
+                .velocity("fadeOut", {
+
+                    display: "none"
                 });
         }
         currField++;

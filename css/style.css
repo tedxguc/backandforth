@@ -78,8 +78,15 @@
         transform-origin: 50% 200%;
 
 }
+#barballsvg{
+    transform: translateX(65%);
+}
 #pivotsvg {
     transform: translateX(31%);
+}
+
+#boxsvg{
+    transform: translate(30%);
 }
 
 #fs-form-wrap {
