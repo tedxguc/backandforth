@@ -270,11 +270,14 @@
         if (this.isLastStep || !this._validade() || this.isAnimating) {
             return false;
         }
-        console.log("number", currField);
 
         if (currField == 0) {
-            console.log("number2", currField);
+            $(".fs-title")
+                // .delay(3000)
+                .velocity("fadeOut", {
 
+                    display: "none"
+                });
             $("#arrowWeightDiv")
                 // .delay(3000)
                 .velocity("fadeOut", {
@@ -290,38 +293,35 @@
                     display: "block"
                 })
             $("#weight2")
-                .delay(2000)
                 // .velocity({
                 //     transformOriginX: 150,
                 //     transformOriginY: 280
                 // })
                 .velocity({
-                    translateY: 450
+                    translateY: 440
                 }, {
-                    duration: 900
+                    duration: 900,
+                    delay: 2000
+
                 })
-                // .velocity({
-                //     translateY: [460,440]
-                // }, {
-                //     duration: 500
-                // })
                 .velocity({
                     rotateZ: -120
                 }, {
                     queue: false,
-                    duration: 600,
-                    delay: 2700
+                    duration: 1000,
+                    delay: 2800
+                        // delay: 800
                 })
                 .velocity({
                     translateY: 440
                 }, {
-                    duration: 900,
-                    delay: 2800,
+                    duration: 1500,
+                    delay: 2900,
+                    // delay: 900,
                     queue: false
                 });
 
             $("#bar")
-                .delay(2100)
                 .velocity({
                     transformOriginX: 170,
                     transformOriginY: 505
@@ -329,18 +329,24 @@
                 .velocity({
                     rotateZ: -20
                 }, {
-                    duration: 1000
+                    duration: 1000,
+                    delay: 2100
+                        // delay: 100
+
                 });
             $("#box")
-                .delay(2700)
                 .velocity({
                     translateY: -600
                 }, {
-                    duration: 1400
+                    duration: 1400,
+                    delay: 2700
+                        // delay: 700
+
                 });
 
         }
         if (currField == 1) {
+
             $("#weightPivotDiv")
                 .velocity("fadeOut", {
 
@@ -351,10 +357,11 @@
                     display: "block"
                 });
             $("#verticalbar")
-                .delay(1200)
                 .velocity({
                     transformOriginX: 138,
                     transformOriginY: 380
+                }, {
+                    delay: 1300
                 })
                 .velocity({
                     rotateZ: 85
@@ -365,26 +372,84 @@
                     delay: 200
                 });
             $("#ballz")
-                .delay(1800)
                 .velocity({
                     translateX: 180
                 }, {
-                    duration: 2000
+                    duration: 2000,
+                    delay: 1900
+
                 });
             $("#box2")
-                .delay(700)
                 .velocity({
                     translateY: -900
                 }, {
-                    duration: 4200,
-                    easing: [.44, .97, .81, .79]
+                    duration: 4300,
+                    easing: [.44, .97, .81, .79],
+                    delay: 800
+
                 });
         }
         if (currField == 2) {
-            $("#weightPivotDiv")
+
+            $("#barBallDiv")
                 .velocity("fadeOut", {
 
                     display: "none"
+                });
+            $("#ballJump")
+                .velocity("fadeIn", {
+
+                    display: "block"
+                });
+            // $.Velocity.mock = 2;
+
+            $("#ballz2")
+                .velocity({
+                    translateX: "70vw"
+                }, {
+                    duration: 4800,
+                    delay: 1000
+
+                })
+                .velocity({
+                    translateY: 93
+                }, {
+                    duration: 500,
+                    queue: false,
+                    delay: 4000
+                })
+                .velocity({
+                    translateY: 82
+                }, {
+                    duration: 100,
+                    queue: false,
+                    delay: 4450
+                })
+                .velocity({
+                    translateY: 93
+                }, {
+                    duration: 80,
+                    queue: false,
+                    delay: 4600
+                })
+                .velocity({
+                    translateY: 190
+                }, {
+                    duration: 500,
+                    queue: false,
+                    delay: 4900
+                });
+        }
+        if (currField == 3) {
+            $("#ballJump")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+            $("#buttonpress")
+                .velocity("fadeIn", {
+
+                    display: "block"
                 });
         }
         currField++;
@@ -614,7 +679,7 @@
     // TODO
     FForm.prototype._showError = function(err) {
         var message = '';
-        $("body").velocity("callout.shake")
+        $("#fs-form-wrap").velocity("callout.shake")
         switch (err) {
             case 'NOVAL':
                 message = 'Please fill the required fields before continuing';
