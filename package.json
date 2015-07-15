@@ -33,6 +33,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "grunt-modernizr": "^0.6.0",
     "grunt-newer": "^1.1.1",
     "grunt-preprocess": "^5.0.0",
     "grunt-rev": "^0.1.0"

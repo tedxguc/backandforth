@@ -102,6 +102,11 @@ module.exports = function(grunt) {
                     dot: true,
                     src: [
                         '.tmp',
+                        'css',
+                        'js',
+                        'fonts',
+                        'img',
+                        '*.{gif,jpeg,jpg,png,svg,html}',
                         '<%= config.dist %>/*',
                         '!<%= config.dist %>/.git*'
                     ]
@@ -147,20 +152,20 @@ module.exports = function(grunt) {
             html: '<%= config.app %>/index.html'
         },
 
-        preprocess : {
+        preprocess: {
             options: {
                 inline: true,
-                context : {
+                context: {
                     DEBUG: false
                 }
             },
-            html : {
-                src : [
+            html: {
+                src: [
                     // '<%= config.dist %>/index.html', 
                     '<%= config.dist %>/*.html'
                 ]
             },
-            js : {
+            js: {
                 src: ['.tmp/js/*.js']
             }
         },
@@ -220,33 +225,41 @@ module.exports = function(grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        cssmin: {
-            dist: {
-                files: {
-                    '<%= config.dist %>/css/main.css': [
-                        '.tmp/css/{,*/}*.css',
-                        '<%= config.app %>/css/{,*/}*.css'
-                    ]
-                }
-            }
-        },
-        uglify: {
-            dist: {
-                files: {
-                    '<%= config.dist %>/ifrmae/main.js': [
-                        '.tmp/iframe/main.js'
-                    ]
-                }
-            }
-        },
-        concat: {
-            dist: {}
-        },
+        // cssmin: {
+        //     dist: {
+        //         files: {
+        //             '<%= config.dist %>/css/main.css': [
+        //                 '.tmp/css/{,*/}*.css',
+        //                 '<%= config.app %>/css/{,*/}*.css'
+        //             ]
+        //         }
+        //     }
+        // },
+        // uglify: {
+        //     dist: {
+        //         files: {
+        //             '<%= config.dist %>/ifrmae/main.js': [
+        //                 '.tmp/iframe/main.js'
+        //             ]
+        //         }
+        //     }
+        // },
+        // concat: {
+        //     dist: {}
+        // },
 
         // Copies remaining files to places other tasks can use
         copy: {
             dep: {
-
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= config.dist %>',
+                    dest: '<%= config.dep %>',
+                    src: [
+                        '{,*/}*',
+                    ]
+                }]
             },
             dist: {
                 files: [{
@@ -257,9 +270,11 @@ module.exports = function(grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
+                        '*.svg',
                         'img/{,*/}*',
                         '{,*/}*.html',
                         'fonts/{,*/}*.*',
+                        'js/modernizr.custom.js',
                         // 'vendor/MathJax/**'
                     ]
                 }]
@@ -275,7 +290,7 @@ module.exports = function(grunt) {
 
         // Run some tasks in parallel to speed up build process
         concurrent: {
-            limit:5,
+            limit: 5,
             watch: {
                 tasks: ['nodemon:dev', 'watch'],
                 options: {
@@ -335,7 +350,7 @@ module.exports = function(grunt) {
             'concurrent:watchtest'
         ]);
     });
-    
+
     grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
@@ -343,13 +358,14 @@ module.exports = function(grunt) {
         'autoprefixer',
         'concat',
         'cssmin',
-        'preprocess:js',  // Remove DEBUG code from production builds
-        'preprocess:html',  // Remove DEBUG code from production builds
+        'preprocess:js', // Remove DEBUG code from production builds
+        'preprocess:html', // Remove DEBUG code from production builds
         'copy:dist',
         'uglify',
         'rev',
         'usemin',
-        'htmlmin',
+        // 'htmlmin',
+        'copy:dep'
     ]);
 
     grunt.registerTask('default', [
