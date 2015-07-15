@@ -66,10 +66,20 @@
     transform: translate(12%, 40%);
 }
 
-
-
 #weightsvg {
     transform: translate(70%, -140%);
+}
+
+#weightsvg2 {
+    transform: translateX(50%);
+/*    transform-origin: 50% 50%;
+*/}
+#weight2{
+        transform-origin: 50% 200%;
+
+}
+#pivotsvg {
+    transform: translateX(31%);
 }
 
 #fs-form-wrap {

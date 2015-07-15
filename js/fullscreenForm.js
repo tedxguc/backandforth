@@ -275,30 +275,10 @@
         if (currField == 0) {
             console.log("number2", currField);
 
-            $("#weight")
+            $("#arrowWeightDiv")
                 // .delay(3000)
                 .velocity("fadeOut", {
 
-                    display: "none"
-                });
-            $("#arrow")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $("#bow")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $(".greeting")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $("#rope")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $("#rope2")
-                .velocity("fadeOut", {
                     display: "none"
                 });
             $("#weightsvg2")
@@ -311,29 +291,38 @@
                 })
             $("#weight2")
                 .delay(2000)
-                .velocity({
-                    transformOriginX: 150,
-                    transformOriginY: 280
-                })
+                // .velocity({
+                //     transformOriginX: 150,
+                //     transformOriginY: 280
+                // })
                 .velocity({
                     translateY: 440
                 }, {
-                    duration: 800
-                })
-                .velocity({
-                    translateY: [460,440]
-                }, {
-                    duration: 1000
+                    duration: 900
                 })
                 // .velocity({
-                //     rotateZ: -30
+                //     translateY: [460,440]
                 // }, {
-                //     duration: 400
+                //     duration: 500
                 // })
+                .velocity({
+                    rotateZ: -120
+                }, {
+                    queue: false,
+                    duration: 600,
+                    delay:2700
+                })
+                 .velocity({
+                    translateY: 440
+                }, {
+                    duration: 900,
+                     delay:2800,
+                     queue: false
+                })
                 ;
 
             $("#bar")
-                .delay(2400)
+                .delay(2100)
                 .velocity({
                     transformOriginX: 170,
                     transformOriginY: 505
@@ -344,7 +333,7 @@
                     duration: 1000
                 });
             $("#box")
-                .delay(3000)
+                .delay(2700)
                 .velocity({
                     translateY: -600
                 }, {
