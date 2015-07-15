@@ -62,6 +62,16 @@
     min-width: 18%;
 }
 
+#bowArrow {
+    transform: translate(12%, 40%);
+}
+
+
+
+#weightsvg {
+    transform: translate(70%, -140%);
+}
+
 #fs-form-wrap {
     display: none;
 }
