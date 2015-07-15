@@ -1,5 +1,4 @@
 .greeting {
-
     text-align: center;
     font-size: 2em;
 }
@@ -10,17 +9,34 @@
     font-size: 0.8em;
 }
 
-#tedxguclogo{
+#tedxguclogo {
     width: 10%;
     position: fixed;
     left: 2%;
-    bottom:2%;
+    bottom: 2%;
 }
+
 #logosvg {
     width: 10%;
     position: fixed;
     left: 2%;
-    top:4%;
+    top: 4%;
+}
+
+#dotsinstructions {
+    width: 100%;
+    display: none;
+    position: absolute;
+    text-align: center;
+    right:2%;
+    font-size: 0.8em;
+
+}
+
+.complete{
+    width: 100%;
+    height: 100%;
+
 }
 
 #q1,

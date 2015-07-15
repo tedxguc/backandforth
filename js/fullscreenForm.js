@@ -272,12 +272,15 @@
         }
 
         if (currField == 0) {
-            $(".fs-title")
-                // .delay(3000)
+            $(".greeting")
                 .velocity("fadeOut", {
-
-                    display: "none"
+                    display: "none",
                 });
+            $("#dotsinstructions")
+                .velocity("fadeIn", {
+                    display: "block",
+                });
+
             $("#arrowWeightDiv")
                 // .delay(3000)
                 .velocity("fadeOut", {
@@ -469,7 +472,7 @@
                     easing: [.47, .68, .84, .99],
                     queue: false
 
-                }) ;
+                });
             $("#buttonz")
                 .velocity({
                     translateX: 5
