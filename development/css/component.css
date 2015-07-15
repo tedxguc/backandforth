@@ -370,12 +370,13 @@ button.fs-continue,
     background-image: url(../img/mobile.svg);
 }
 
-.fs-fields .fs-radio-custom label.radio-social::after {
-    background-image: url(../img/social.svg);
+.fs-fields .fs-radio-custom label.radio-studentyes::after {
+    background-image: url(../img/drawing.svg);
+       background-size:60%;
 }
 
-.fs-fields .fs-radio-custom label.radio-conversion::after {
-    background-image: url(../img/conversion.svg);
+.fs-fields .fs-radio-custom label.radio-studentno::after {
+    background-image: url(../img/no.svg);
 }
 
 .fs-fields .fs-radio-custom label:hover::after,
