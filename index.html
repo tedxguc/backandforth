@@ -24,9 +24,10 @@
 </head>
 
 <body>
+    <object data="logo.svg" type="image/svg+xml" id="logosvg">
+    </object>
+    <img id="tedxguclogo" src="tedxguc2.png">
     <div class="container">
-        <div class="md-modal md-effect-7" id="modal-7">
-        </div>
         <div class="fs-title">
             <div class="greeting" style="white-space:pre">
             </div>
@@ -388,7 +389,7 @@
                     }, {
                         duration: 1000
                     });
-                $("body")
+                $(".container")
                     .delay(4000)
                     .velocity("callout.swing");
             },

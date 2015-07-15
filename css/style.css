@@ -1,4 +1,5 @@
 .greeting {
+
     text-align: center;
     font-size: 2em;
 }
@@ -7,6 +8,19 @@
     display: inline-block;
     width: 10%;
     font-size: 0.8em;
+}
+
+#tedxguclogo{
+    width: 10%;
+    position: fixed;
+    left: 2%;
+    bottom:2%;
+}
+#logosvg {
+    width: 10%;
+    position: fixed;
+    left: 2%;
+    top:4%;
 }
 
 #q1,
@@ -109,11 +123,11 @@
 }
 
 #buttonsvg {
-    transform: translate(42.6vw,-370%) ;
+    transform: translate(42.6vw, -370%);
 }
 
-#ballsvg3{
-transform: translate(-100%,-70%);
+#ballsvg3 {
+    transform: translate(-100%, -70%);
 }
 
 .q2 {
@@ -174,6 +188,7 @@ textarea {
     position: absolute; 
     top: 50%;
 }*/
-.typed-cursor{
+
+.typed-cursor {
     display: none;
 }

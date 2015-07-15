@@ -707,7 +707,7 @@
     // TODO
     FForm.prototype._showError = function(err) {
         var message = '';
-        $("#fs-form-wrap").velocity("callout.shake")
+        $(".fs-current").velocity("callout.shake")
         switch (err) {
             case 'NOVAL':
                 message = 'Please fill the required fields before continuing';
