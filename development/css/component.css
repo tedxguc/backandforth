@@ -910,7 +910,7 @@ input[type=text]::-ms-clear {
         margin: 20px;
     }
     .fs-nav-dots {
-        right: 25px;
+        right: 50%;
     }
     button.fs-continue {
         right: 20px;

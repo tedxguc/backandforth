@@ -483,6 +483,79 @@
 
                 });
         }
+        if (currField == 4) {
+            $("#buttonpress")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+            $("#leverArrow")
+                .velocity("fadeIn", {
+
+                    display: "block"
+                });
+
+            $("#lvr")
+                .velocity({
+                    translateY: "36.4vh"
+                }, {
+                    delay: 500,
+                    duration: 3000
+                })
+                .velocity("reverse");
+            $("#arrw")
+                .velocity({
+                    translateY: "36.4vh"
+                }, {
+                    delay: 500,
+                    queue: false,
+                    duration: 3000
+                })
+                .velocity({
+                    translateX: -15
+                }, {
+                    duration: 1000,
+                    delay: 4200
+                })
+                .velocity({
+                    translateX: "100vw"
+                }, {
+                    duration: 600
+                });
+
+        }
+        if (currField == 5) {
+            $("#leverArrow")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+
+            $("#lastArrow")
+                .velocity("fadeIn", {
+
+                    display: "block"
+                });
+            $("#arrw3")
+                .velocity({
+                    translateX: "120vw"
+                }, {
+                    duration: 1000,
+                    delay: 1000
+                });
+        }
+        if (currField == 6) {
+            $("#lastArrow")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+            $("#dotsinstructions")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+        }
         currField++;
         this.isAnimating = true;
 
