@@ -270,35 +270,21 @@
         if (this.isLastStep || !this._validade() || this.isAnimating) {
             return false;
         }
-        console.log("number", currField);
 
         if (currField == 0) {
-            console.log("number2", currField);
+            $(".greeting")
+                .velocity("fadeOut", {
+                    display: "none",
+                });
+            $("#dotsinstructions")
+                .velocity("fadeIn", {
+                    display: "block",
+                });
 
-            $("#weight")
+            $("#arrowWeightDiv")
                 // .delay(3000)
                 .velocity("fadeOut", {
 
-                    display: "none"
-                });
-            $("#arrow")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $("#bow")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $(".greeting")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $("#rope")
-                .velocity("fadeOut", {
-                    display: "none"
-                });
-            $("#rope2")
-                .velocity("fadeOut", {
                     display: "none"
                 });
             $("#weightsvg2")
@@ -310,24 +296,35 @@
                     display: "block"
                 })
             $("#weight2")
-                .delay(2000)
+                // .velocity({
+                //     transformOriginX: 150,
+                //     transformOriginY: 280
+                // })
                 .velocity({
-                    transformOriginX: 150,
-                    transformOriginY: 280
+                    translateY: 440
+                }, {
+                    duration: 900,
+                    delay: 2000
+
+                })
+                .velocity({
+                    rotateZ: -120
+                }, {
+                    queue: false,
+                    duration: 1000,
+                    delay: 2800
+                        // delay: 800
                 })
                 .velocity({
                     translateY: 440
                 }, {
-                    duration: 800
-                })
-                .velocity({
-                    rotateZ: -30
-                }, {
-                    duration: 400
+                    duration: 1500,
+                    delay: 2900,
+                    // delay: 900,
+                    queue: false
                 });
 
             $("#bar")
-                .delay(2000)
                 .velocity({
                     transformOriginX: 170,
                     transformOriginY: 505
@@ -335,18 +332,24 @@
                 .velocity({
                     rotateZ: -20
                 }, {
-                    duration: 1000
+                    duration: 1000,
+                    delay: 2100
+                        // delay: 100
+
                 });
             $("#box")
-                .delay(2600)
                 .velocity({
                     translateY: -600
                 }, {
-                    duration: 1400
+                    duration: 1400,
+                    delay: 2700
+                        // delay: 700
+
                 });
 
         }
         if (currField == 1) {
+
             $("#weightPivotDiv")
                 .velocity("fadeOut", {
 
@@ -357,10 +360,11 @@
                     display: "block"
                 });
             $("#verticalbar")
-                .delay(1200)
                 .velocity({
                     transformOriginX: 138,
                     transformOriginY: 380
+                }, {
+                    delay: 1300
                 })
                 .velocity({
                     rotateZ: 85
@@ -371,19 +375,112 @@
                     delay: 200
                 });
             $("#ballz")
-                .delay(1800)
                 .velocity({
-                    translateX: 170
+                    translateX: 180
                 }, {
-                    duration: 2000
+                    duration: 2000,
+                    delay: 1900
+
                 });
             $("#box2")
-                .delay(700)
                 .velocity({
-                    translateY: -800
+                    translateY: -900
                 }, {
-                    duration: 5000,
-                    easing: [ .44,.97,.81,.79 ]
+                    duration: 4300,
+                    easing: [.44, .97, .81, .79],
+                    delay: 800
+
+                });
+        }
+        if (currField == 2) {
+
+            $("#barBallDiv")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+            $("#ballJump")
+                .velocity("fadeIn", {
+
+                    display: "block"
+                });
+            // $.Velocity.mock = 2;
+
+            $("#ballz2")
+                .velocity({
+                    translateX: "70vw"
+                }, {
+                    duration: 4800,
+                    delay: 1000
+
+                })
+                .velocity({
+                    translateY: 93
+                }, {
+                    duration: 500,
+                    queue: false,
+                    delay: 4000
+                })
+                .velocity({
+                    translateY: 82
+                }, {
+                    duration: 100,
+                    queue: false,
+                    delay: 4450
+                })
+                .velocity({
+                    translateY: 93
+                }, {
+                    duration: 80,
+                    queue: false,
+                    delay: 4600
+                })
+                .velocity({
+                    translateY: 190
+                }, {
+                    duration: 500,
+                    queue: false,
+                    delay: 4900
+                });
+        }
+        if (currField == 3) {
+            $("#ballJump")
+                .velocity("fadeOut", {
+
+                    display: "none"
+                });
+            $("#buttonpress")
+                .velocity("fadeIn", {
+
+                    display: "block"
+                });
+
+            $("#ballz3")
+                .velocity({
+                    translateX: "66.5vw"
+                }, {
+                    duration: 4800,
+                    delay: 1000,
+                    easing: [.47, .68, .84, .99]
+
+                })
+                .velocity({
+                    translateX: "65vw"
+                }, {
+                    duration: 500,
+                    delay: 5800,
+                    easing: [.47, .68, .84, .99],
+                    queue: false
+
+                });
+            $("#buttonz")
+                .velocity({
+                    translateX: 5
+                }, {
+                    duration: 200,
+                    delay: 5600,
+                    queue: false
+
                 });
         }
         currField++;
@@ -613,7 +710,7 @@
     // TODO
     FForm.prototype._showError = function(err) {
         var message = '';
-        $("body").velocity("callout.shake")
+        $(".fs-current").velocity("callout.shake")
         switch (err) {
             case 'NOVAL':
                 message = 'Please fill the required fields before continuing';
