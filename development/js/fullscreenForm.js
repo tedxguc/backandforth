@@ -746,10 +746,8 @@
                 } else if (input[z].value === '' && input[z].type == 'text') {
                     error = 'NOVAL';
                 } else if (input[z].type == 'number' && input[z].value === "") {
-                    console.log(input[z]);
                     error = 'INVALIDNUMBER'
                 } else if (input[z].type == 'email' && (input[z].validity) && (!input[z].validity.valid)) {
-                    console.log(input[z]);
                     error = 'INVALIDEMAIL'
                 }
 
