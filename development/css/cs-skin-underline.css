@@ -6,9 +6,9 @@ div.cs-skin-underline {
 	font-size: 0.8em;
 }
 
-@media screen and (max-width: 30em) {
-	div.cs-skin-underline { font-size: 1.2em; }
-}
+/*@media screen and (max-width: 30em) {
+	div.cs-skin-underline { font-size: 1em; }
+}*/
 
 .cs-skin-underline > span {
 	padding: 0.5em 3em 0.5em 0.5em;

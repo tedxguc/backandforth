@@ -184,7 +184,6 @@ button.fs-continue,
     padding: 0 0 2em 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
-
 /*.fs-form-overview .fs-fields > li#talkli ,
 .no-js .fs-form .fs-fields > li#talkli {
     margin: 1em 0 2em;
@@ -372,7 +371,7 @@ button.fs-continue,
 
 .fs-fields .fs-radio-custom label.radio-studentyes::after {
     background-image: url(../img/drawing.svg);
-       background-size:60%;
+    background-size: 60%;
 }
 
 .fs-fields .fs-radio-custom label.radio-studentno::after {
@@ -901,7 +900,7 @@ input[type=text]::-ms-clear {
         top: 0;
         right: 0;
         padding: 1.5em 1em 8em 1em;
-        font-size: 1.2em;
+        font-size: 2em;
     }
     .fs-title {
         text-align: center;
@@ -911,6 +910,7 @@ input[type=text]::-ms-clear {
         margin: 20px;
     }
     .fs-nav-dots {
+        top:-10%;
         right: 50%;
     }
     button.fs-continue {
@@ -942,7 +942,6 @@ input[type=text]::-ms-clear {
         font-size: 1.25em;
     }
     .fs-message-error {
-        bottom: 1.75em;
         left: 0;
         padding: 0 90px 0 2em;
         width: 100%;
@@ -953,5 +952,10 @@ input[type=text]::-ms-clear {
     .fs-message-error.fs-show {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+        top: 17%;
+        font-size: 1em;
+        left: 8%;
     }
+
+
 }

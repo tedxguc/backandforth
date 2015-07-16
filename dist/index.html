@@ -6,12 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Back and Forth - TEDxGUC</title>
-    <meta name="description" content="Fullscreen Form Interface: A distraction-free form concept with fancy animations" />
-    <meta name="keywords" content="fullscreen form, css animations, distraction-free, web design" />
-    <meta name="author" content="Codrops" />
+    <meta name="keywords" content="TEDxGUC, Back and Forth, Application, Description, Ideas worth spreading" />
+    <meta name="author" content="TEDxGUC" />
     <link rel="shortcut icon" href="../favicon.ico">
-<link rel="stylesheet" href="css/fcfb7325.vendor.css">
-<link rel="stylesheet" href="css/884dd23d.style.css">
+    <meta property="og:url" content="http://www.tedxguc.com/backandforth">
+    <meta property="og:title" content="TEDxGUC/backandforth">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="TEDxGUC's event back and forth application'">
+    <meta property="og:image" content="http://www.tedxguc.com/backandforth/development/websitescreen.png">
+    <link rel="image_src" href="http://www.tedxguc.com/backandforth/development/websitescreen.png" />
+    <!-- Google will often use this as its description of your page/site. Make it good. -->
+    <meta name="description" content="TEDxGUC is an independently organized TED event hosted in The German University in Cairo, We are a platform for sharing ideas worth spreading this is back and forth's application page and description">
+    <meta name="keywords" content="GUC TED TEDx TEDxGUC Ideas idea inspiration design entertainement talks speakers egypt German university in cairo back and forth application">
+    <!-- Google will often use this as its description of your page/site. Make it good. -->
+    <meta name="google-site-verification" content="GUC TED TEDx TEDxGUC Ideas idea inspiration design entertainement talks speakers egypt German university in cairo back and forth application">
+    <!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+    <meta name="author" content="TEDxGUC">
+    <meta name="Copyright" content="TEDxGUC">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/913504c8.vendor.css">
+    <link rel="stylesheet" href="css/7f77b691.style.css">
     <script src="js/7f25c30d.modernizr.custom.js"></script>
     <script>
     var submitted = false;
@@ -19,10 +33,13 @@
 </head>
 
 <body>
-    <object data="logo.svg" type="image/svg+xml" id="logosvg" >
+    <object data="logo.svg" type="image/svg+xml" id="logosvg">
     </object>
-    <img id="tedxguclogo" src="2e9bd6ea.tedxguc2.png" >
+    <img id="tedxguclogo" src="2e9bd6ea.tedxguc2.png">
     <div class="container">
+        <div id="warning">
+            Use Chrome or Firefox for a better experience.
+        </div>
         <div class="fs-title">
             <div class="greeting" style="white-space:pre">
             </div>
@@ -149,7 +166,7 @@
                 </g>
             </svg>
         </div>
-        <div id = "lastArrow">
+        <div id="lastArrow">
             <svg id="arrow3" width="100%">
                 <g id="bowarrows2" stroke-linejoin="miter" transform="translate(-70.9375,-800.83974)" stroke-linecap="butt" stroke-dasharray="none" stroke-miterlimit="10" fill="none">
                     <g id="arrowgr3">
@@ -213,13 +230,13 @@
                         </div>
                     </li> -->
                     <li>
-                        <label class="fs-field-label fs-anim-upper" for="q3" required>Why are you interested in attending our confrence?
+                        <label class="fs-field-label fs-anim-upper" for="q3" required>Why are you interested in attending our conference?
                         </label>
                         <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
                         <textarea class="fs-anim-lower" id="q3" name="entry.1866958370" value="" required></textarea>
                     </li>
                     <li>
-                        <label class="fs-field-label fs-anim-upper" for="q4" required>What do you think you'll benefit/gain out from attending the confrence?
+                        <label class="fs-field-label fs-anim-upper" for="q4" required>What do you think you'll benefit/gain out from attending the conference?
                         </label>
                         <!--   <input class="fs-anim-lower" id="q3" name="q3" type="textarea" placeholder="Event" /> -->
                         <textarea class="fs-anim-lower" id="q4" name="entry.1841985040" value="" required></textarea>
@@ -368,16 +385,21 @@
     <script>
     $(function() {
         $(".greeting").typed({
-            strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this appliction.", "Let's start by some <strong> Basic Information</strong>."],
+            strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this application.", "Let's start by some <strong> Basic Information</strong>."],
             // strings: ["hi"],
             typeSpeed: 0,
             backSpeed: -50,
             backDelay: 1000,
             callback: function() {
+                $("#warning")
+                    .velocity("fadeOut", {
+                        display: "none",
+                        delay: 500
+                    });
                 $(".fs-title")
                     .delay(500)
                     .velocity({
-                        translateY: -280
+                        top: "0%"
                     }, {
                         duration: 500
                     });
