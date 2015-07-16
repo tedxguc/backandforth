@@ -319,6 +319,15 @@ a.svgclick:after {
     height: 560px;
 }
 
+#sharetext {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    font-size: 0.8em;
+}
+
 #gucian {
     display: none;
     position: absolute;
@@ -433,7 +442,7 @@ textarea {
         padding: 0;
         margin-left: 26%;
         top: 36%;
-        left:0%;
+        left: 0%;
     }
     #thankyou {
         font-size: 1em;
@@ -446,5 +455,8 @@ textarea {
     }
     #warning {
         display: none;
+    }
+    #sharetext {
+        font-size: 0.6em;
     }
 }
