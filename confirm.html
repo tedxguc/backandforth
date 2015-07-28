@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Back and Forth - TEDxGUC</title>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/913504c8.vendor.css">
+    <link rel="stylesheet" href="css/fafe4f1f.style.css">
+    <script src="js/7f25c30d.modernizr.custom.js"></script>
+    <script>
+    var submitted = false;
+    </script>
+</head>
+
+<body>
+    <div class="fs-title">
+        <div class="disclaimer" style="white-space:pre">
+        </div>
+        <button type="button" id="continueButton" class="hvr-underline-from-left" onclick="viewForm()">Click here to continue to the form</button>
+        <div class="dotsinstructions" id = "confirmDots" >
+            Click on the dots to navigate back to any question.
+        </div>
+    </div>
+    <div class="fs-form-wrap" id="fs-form-wrap">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
+{window.location.href ='./completeConfirm.html';}"></iframe>
+        <form id="myform" class="fs-form fs-form-full" autocomplete="off" action="https://docs.google.com/forms/d/17VYAIDzACeicps5QNKmqNBLZOSNimx2mdH0pmV-R9uQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <ol class="fs-fields">
+                <li id="firstQ">
+                    <!--     <label class="fs-field-label fs-anim-upper" for="q1">What's your name?</label>
+                        <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Dean Moriarty" required/> -->
+                    <label class="fs-field-label fs-anim-upper" for="cq1">Please fill in your Name, Email and Phone number exactly <span style="color: red;">as written</span> in the initial application.</label>
+                    <input type="text" value="" class="fs-anim-lower" id="cq1" name="entry.621272697" placeholder="First" required/>
+                    <input type="text" value="" class="fs-anim-lower" id="cq12" name="entry.621272697" placeholder="Middle" required />
+                    <input type="text" value="" class="fs-anim-lower" id="cq13" name="entry.621272697" placeholder="Last" required /> .
+                    <br>
+                    <input type="text" value="" class="fs-anim-lower" id="cq14" name="entry.2048311903" placeholder="number" required/>
+                    <br>
+                    <input type="email" value="" placeholder="Email" class="fs-anim-lower" id="cq15" name="entry.396204715" required/>
+                    <br>
+                </li>
+                <li>
+                    <label class="fs-field-label fs-anim-upper" for="cq2" data-info="This is for Adding you to a Facebook group, with all the other Attendees. The group is for information about the event and pre/post event Networking. If you don't have a Facebook profile just leave blank.">Please insert your Facebook profile Link.
+                    </label>
+                    <input class="fs-anim-lower" id="cq2" name="entry.755919544" type="text" placeholder="www.facebook.com/tedxguc" />
+                    <li>
+                        <label class="fs-field-label fs-anim-upper" for="cq3" data-info="This is for the ID delivery and fees collection.">Please provide us with your specific address.
+                        </label>
+                        <input type="text" value="" class="fs-anim-lower" id="cq3" name="entry.1457461351" placeholder="Apartment Number" required/>
+                        <input type="text" value="" class="fs-anim-lower" id="cq31" name="entry.1457461351" placeholder="Building" required />
+                        <input type="text" value="" class="fs-anim-lower" id="cq32" name="entry.1457461351" placeholder="Street" required />
+                        <input type="text" value="" class="fs-anim-lower" id="cq33" name="entry.1457461351" placeholder="Area e.g:(Maadi, Mohandeseen, ...)" required />
+                        <input type="text" value="" class="fs-anim-lower" id="cq34" name="entry.1457461351" placeholder="Governorate" required />
+                    </li>
+                    <li>
+                        <label class="fs-field-label fs-anim-upper" for="cq4" data-info="This is for ID information.">Please fill in your occupation.
+                        </label>
+                        <input type="text" value="" class="fs-anim-lower" id="cq4" name="entry.194984224" placeholder="Occupation" required/>
+                    </li>
+                    <li id="studentli">
+                        <label class="fs-field-label fs-anim-upper" for="cq5" required>Are you a GUC student?</label>
+                        <div class="fs-radio-group clearfix fs-anim-lower">
+                            <span><input id="cq5" name="entry.1483686347" type="radio" value="Yes" required/><label for="cq5" >Yes</label></span>
+                            <span><input id="cq51" name="entry.1483686347"  type="radio" value="No"/><label for="cq51" >No</label></span>
+                        </div>
+                        <div id="natID">
+                            <label class="fs-field-label fs-anim-upper" for="cq52" data-info="This is necessary for permission to enter the GUC campus. Utter privacy and discretion are ensured." required>Please enter your National ID number.</label>
+                            <input type="text" value="" class="fs-anim-lower" id="cq52" name="entry.972402030" placeholder="National ID"/>
+                            <br>
+                        </div>
+                    </li>
+            </ol>
+            <!-- /fs-fields -->
+            <button class="fs-submit" type="submit" name="submit" id="ss-submit" value="Submit">Send answers</button>
+        </form>
+        <!-- /fs-form -->
+    </div>
+    <!-- /fs-form-wrap -->
+    </div>
+    <!-- /container -->
+    <!--    <footer id="footer">
+        <div class="footer-container"><img class="aboutImg" src="img/footerlogo.png" />
+            <p>
+                This independent TEDx event is operated under license from <a href="http://www.ted.com" class="external-link" title="External link: TED Homepage ted.com, opens in a new window.">TED</a>.
+                <br/>
+                <br/> Designed by <a target="_blank" href="">Mohamed Hazem,</a> <a target="_blank" href="">Nourhan Ayman </a>developed by <a href="mailto:omarkamal95@gmail.com">Omar Mahmoud</a></p>
+            <div class="socialMedia">
+                <a target="_blank" href="http://www.facebook.com/TEDxGUC"><img src="imgs/fb.png" /></a>
+                <a target="_blank" href="https://twitter.com/TEDxGUC"><img src="img/twitter.png" /></a>
+            </div>
+        </div>
+    </footer> -->
+    <script src="js/fcf70625.vendor.js"></script>
+    <script>
+    $('input[name="entry.1483686347"]').change(function() {
+        if ($(this).val() == 'No' && $(this).is(":checked")) {
+
+            $("#natID")
+                .velocity("fadeIn", {
+                    display: "block"
+                });
+        } else {
+            $("#natID")
+                .velocity("fadeOut", {
+                    display: "none"
+                });
+        }
+    });
+    </script>
+    <script>
+    function resizeInput() {
+        $(this).attr('size', $(this).val().length + 4);
+    }
+
+    $('input[type="text"]')
+        // event handler
+        .keyup(resizeInput)
+        // resize on page load
+        .each(resizeInput);
+    </script>
+    <script>
+    (function() {
+        var formWrap = document.getElementById('fs-form-wrap');
+
+        [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function(el) {
+            new SelectFx(el, {
+                stickyPlaceholder: false,
+                onChange: function(val) {
+                    document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+                }
+            });
+        });
+
+        new FForm(formWrap, {
+            onReview: function() {
+                classie.add(document.body, 'overview'); // for demo purposes only
+            }
+        });
+    })();
+    </script>
+    <script>
+    $(function() {
+        $(".disclaimer").typed({
+            strings: ["<font style= \"color: #D70D0D;\">Congratulations!</font> \nYou\'ve made it!", "<font style= \"color: #D70D0D;\">N.B.</font> By filling this form, \nyou are agreeing to have the Conference ID delivered to your door step. \n Thus paying the package and event fees of <font style= \"color: #D70D0D;\">130 EGP.</font>"],
+            // strings: ["hi"],
+            typeSpeed: -10,
+            backSpeed: -50,
+            backDelay: 1000,
+            callback: function() {
+                $('.disclaimer')
+                    .velocity({
+                        translateY: -150
+                    }, {
+                        duration: 500,
+                        delay: 500
+                    });
+                $('#continueButton')
+                    .delay(1000)
+                    .velocity("fadeIn", {
+
+                        display: "block"
+                    });
+            },
+        });
+    });
+    </script>
+    <script>
+    function viewForm() {
+        $('.disclaimer')
+            .velocity("transition.swoopOut", {
+                display: 'none'
+            });
+        $('#continueButton')
+            .velocity("transition.swoopOut", {
+
+                display: "none"
+            });
+        $("#fs-form-wrap")
+            .velocity("transition.flipYIn", {
+                display: "block"
+            });
+    }
+    </script>
+</body>
+
+</html>

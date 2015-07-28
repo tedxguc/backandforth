@@ -10,17 +10,26 @@
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/913504c8.vendor.css">
-    <link rel="stylesheet" href="css/fafe4f1f.style.css">
-    <script src="js/7f25c30d.modernizr.custom.js"></script>
+    <!-- build:css css/vendor.css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-underline.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+    <!-- endbuild -->
+    <!-- build:css css/style.css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- endbuild -->
+    <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
     <div id="arrowlastdiv">
-        <object data="img/1aae545a.arrow.svg" type="image/svg+xml" id="asvg">
+        <object data="img/arrow.svg" type="image/svg+xml" id="asvg">
         </object>
     </div>
-    <div id = "sharetext">
+    <div id="sharetext">
         Share it for your Friends to Apply.
     </div>
     <div class="fb-like" data-href="http://tedxguc.com/backandforth" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial">
@@ -28,30 +37,22 @@
     <div id="thankyou">
         <p class="textthank">
             Thank you for your time!
-            <br> We hope that you've <span style="color: #5566A1;">enjoyed</span> this Application
-            <br> Wait for a reply from us <span style="color: red;">soon!</span>
+            <br> We're waiting to see you in the conference!
+            <br> The ID Will be delivered to you<span style="color: red;"> soon</span>
+            <br> For any inquiries Email us: <span style="color: red;">backandforth@tedxguc.com</span>
+            <br> 
+            <br> 
+            <br><span style="font-size: 0.6em; font-weight: bold;">If you want your friends to join you the application is till open!</span>
+            <br><span style="font-size: 0.6em; font-weight: bold; color: red;">www.tedxguc.com/backandforth</span>
         </p>
-    </div>
-    <div id="socialmedia">
-        <a href="https://www.facebook.com/TEDxGUC?fref=ts" class="svgclick">
-            <object data="img/6b7ac271.fb.svg" type="image/svg+xml" id="fbsvg">
-            </object>
-        </a>
-        <a href="https://instagram.com/tedxguc_/" class="svgclick">
-            <object data="img/67db6874.instagram.svg" type="image/svg+xml" id="instagramsvg">
-            </object>
-        </a>
     </div>
     <object data="logo.svg" type="image/svg+xml" id="logosvg2" style="width:15%;  position: fixed;
     left: 4%;
     bottom: 5%;">
     </object>
-    <img id="tedxguclogo2" src="2e9bd6ea.tedxguc2.png" style="width:15%; position: fixed;
+    <img id="tedxguclogo2" src="tedxguc2.png" style="width:15%; position: fixed;
     right: 4%;
     bottom: 5%;">
-    <a href="http://tedxguc.com/">
-        <button type="button" id="websiteredirect" class="hvr-shutter-out-horizontal">Click here to go to our website</button>
-    </a>
     <div id="fb-root"></div>
     <script>
     (function(d, s, id) {
@@ -63,25 +64,12 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
-    <script src="js/fcf70625.vendor.js"></script>
-    <script>
-    if ($('#arrowlastdiv').css('display') == 'none') {} else {
-        $('#asvg')
-            .velocity({
-                translateX: "48vw",
-            }, {
-                duration: 800,
-                delay: 2000
-            });
-        $("#websiteredirect")
-            .velocity({
-                translateX: "4vw"
-            }, {
-                duration: 200,
-                delay: 2600
-            })
-    }
-    </script>
+    <!-- build:js js/vendor.js -->
+    <script src="./jquery/jquery.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script src="js/fullscreenForm.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>

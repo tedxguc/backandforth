@@ -16,6 +16,16 @@
     bottom: 2%;
 }
 
+.disclaimer {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#confirmDots {
+    white-space: pre;
+    top: -323%;
+}
+
 #logosvg {
     width: 10%;
     position: fixed;
@@ -37,7 +47,7 @@
     bottom: 4%;
 }
 
-#dotsinstructions {
+.dotsinstructions {
     width: 100%;
     display: none;
     position: absolute;
@@ -57,6 +67,8 @@
     padding: 20;
     background-color: rgba(199, 199, 199, 1);
 }
+
+
 /*button#websiteredirect:hover{
     color:white;
     opacity: 0.8;
@@ -119,6 +131,9 @@
     height: 100%;
 }
 
+#cq1,
+#cq12,
+#cq13,
 #q1,
 #q12,
 #q13 {
@@ -128,6 +143,27 @@
     min-width: 18%;
 }
 
+#cq52,
+#cq3,
+#cq31,
+#cq32,
+#cq33,
+#cq34 {
+    display: inline-block;
+    width: auto;
+    font-size: 0.8em;
+    min-width: 65%;
+}
+
+#cq4 {
+    display: block;
+    width: auto;
+    font-size: 0.8em;
+    min-width: 65%;
+}
+
+#cq15,
+#cq14,
 #q8,
 #q81 {
     display: inline-block;
@@ -199,6 +235,7 @@ a.svgclick:after {
     min-width: 27%;
 }
 
+#cq2,
 #q3,
 #q4,
 #q6 {
@@ -258,7 +295,60 @@ a.svgclick:after {
 }
 
 #boxsvg {
-    transform: translate(30%);
+    position: absolute;
+    bottom: -400%;
+    width: 62px;
+    left: 75%;
+}
+
+#continueButton {
+    font-size: 1.1em;
+    position: absolute;
+    margin-left: 29%;
+    top: 50%;
+    height: 32%;
+    width: 33%;
+    opacity: 1;
+    border-width: 0;
+    padding: 14px;
+    background-color: rgba(199, 199, 199, 1);
+    display: none;
+}
+
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #FF3949;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before,
+.hvr-underline-from-left:focus:before,
+.hvr-underline-from-left:active:before {
+    right: 0;
 }
 
 #hbar2 {
@@ -334,6 +424,12 @@ a.svgclick:after {
     top: 386px;
 }
 
+#natID {
+    display: none;
+    position: absolute;
+    top: 230px;
+}
+
 #fieldb {
     display: inline-block;
     font-size: 0.5em;
@@ -378,6 +474,8 @@ textarea {
     height: 1.1em;
     padding: 2px;
 }
+
+
 /*.greeting{
     position: absolute; 
     top: 50%;
@@ -401,6 +499,10 @@ textarea {
     #q14 {
         width: 50%;
     }
+    #cq1,
+    #cq12,
+    #cq13,
+    #cq14,
     #q1,
     #q12,
     #q13 {
@@ -419,6 +521,9 @@ textarea {
     #gucian {
         top: 15em;
     }
+    .disclaimer {
+        font-size: 0.6em;
+    }
     .greeting {
         font-size: 0.7em;
     }
@@ -427,10 +532,13 @@ textarea {
         left: 10%;
         line-height: 1.5;
     }
-    #dotsinstructions {
+    .dotsinstructions {
         right: 6%;
         font-size: 0.6em;
         top: 2%;
+    }
+    #confirmDots {
+        top: -191px;
     }
     .fs-form-overview .fs-fields::before {
         text-align: center;
@@ -440,6 +548,14 @@ textarea {
         width: 50%;
         font-size: 0.7em;
         padding: 0;
+        margin-left: 26%;
+        top: 36%;
+        left: 0%;
+    }
+    #continueButton {
+        height: 100%;
+        width: 50%;
+        font-size: 0.6em;
         margin-left: 26%;
         top: 36%;
         left: 0%;

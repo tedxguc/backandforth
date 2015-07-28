@@ -276,7 +276,7 @@
                 .velocity("fadeOut", {
                     display: "none",
                 });
-            $("#dotsinstructions")
+            $(".dotsinstructions")
                 .velocity("fadeIn", {
                     display: "block",
                 });
@@ -376,7 +376,7 @@
                 });
             $("#ballz")
                 .velocity({
-                    translateX: 180
+                    translateX: 200
                 }, {
                     duration: 2000,
                     delay: 1900
@@ -384,9 +384,9 @@
                 });
             $("#box2")
                 .velocity({
-                    translateY: -900
+                    translateY: "-125vh"
                 }, {
-                    duration: 4300,
+                    duration: 2350,
                     easing: [.44, .97, .81, .79],
                     delay: 800
 
