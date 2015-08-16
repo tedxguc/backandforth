@@ -77,7 +77,7 @@
                         </div>
                         <div id="natID">
                             <label class="fs-field-label fs-anim-upper" for="cq52" data-info="This is necessary for permission to enter the GUC campus. Utter privacy and discretion are ensured." required>Please enter your National ID number.</label>
-                            <input type="text" value="" class="fs-anim-lower" id="cq52" name="entry.972402030" placeholder="National ID"/>
+                            <input type="text" value="" class="fs-anim-lower" id="cq52" name="entry.972402030" placeholder="National ID" required/>
                             <br>
                         </div>
                     </li>
@@ -119,7 +119,7 @@
     <script src="js/selectFx.js"></script>
     <script src="js/fullscreenForm.js"></script>
     <!-- endbuild -->
-    <script>
+ <!--   <script>
     $('input[name="entry.1483686347"]').change(function() {
         if ($(this).val() == 'No' && $(this).is(":checked")) {
 
@@ -134,7 +134,7 @@
                 });
         }
     });
-    </script>
+    </script> -->
     <script>
     function resizeInput() {
         $(this).attr('size', $(this).val().length + 4);

@@ -425,7 +425,7 @@ a.svgclick:after {
 }
 
 #natID {
-    display: none;
+    display: block;
     position: absolute;
     top: 230px;
 }
