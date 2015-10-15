@@ -385,66 +385,66 @@
     <script>
     $(function() {
         $(".greeting").typed({
-            // strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this application.", "Let's start by some <strong> Basic Information</strong>."],
-            strings: ["We're Sorry, but the application has been closed."],
+            strings: ["Well Hi there!", "We\'re <font style= \"color: #D70D0D;\">TEDxGUC</font> \nAnd we\'d like to welcome you to this application.", "Let's start by some <strong> Basic Information</strong>."],
+            // strings: ["We're Sorry, but the application has been closed."],
             typeSpeed: 0,
             backSpeed: -50,
             backDelay: 1000,
-            // callback: function() {
-            //     $("#warning")
-            //         .velocity("fadeOut", {
-            //             display: "none",
-            //             delay: 500
-            //         });
-            //     $(".fs-title")
-            //         .delay(500)
-            //         .velocity({
-            //             top: "0%"
-            //         }, {
-            //             duration: 500
-            //         });
-            //     $("#fs-form-wrap")
-            //         .velocity("fadeIn", {
-            //             display: "block",
-            //             delay: 500
-            //         });
-            //     $("#arrowWeightDiv")
-            //         .velocity("fadeIn", {
-            //             display: "block",
-            //             delay: 500
-            //         });
-            //     $("#arrow")
-            //         .delay(2500)
-            //         .velocity({
-            //             translateX: -10
-            //         }, {
-            //             duration: 1000
-            //         })
-            //         .velocity({
-            //             translateX: "78vw"
-            //         }, {
-            //             duration: 600
-            //         });
-            //     $("#weight")
-            //         .delay(3900)
-            //         .velocity({
-            //             translateY: 1500
-            //         }, {
-            //             duration: 1000
-            //         });
-            //     $(".container")
-            //         .delay(4000)
-            //         .velocity("callout.swing");
+            callback: function() {
+                $("#warning")
+                    .velocity("fadeOut", {
+                        display: "none",
+                        delay: 500
+                    });
+                $(".fs-title")
+                    .delay(500)
+                    .velocity({
+                        top: "0%"
+                    }, {
+                        duration: 500
+                    });
+                $("#fs-form-wrap")
+                    .velocity("fadeIn", {
+                        display: "block",
+                        delay: 500
+                    });
+                $("#arrowWeightDiv")
+                    .velocity("fadeIn", {
+                        display: "block",
+                        delay: 500
+                    });
+                $("#arrow")
+                    .delay(2500)
+                    .velocity({
+                        translateX: -10
+                    }, {
+                        duration: 1000
+                    })
+                    .velocity({
+                        translateX: "78vw"
+                    }, {
+                        duration: 600
+                    });
+                $("#weight")
+                    .delay(3900)
+                    .velocity({
+                        translateY: 1500
+                    }, {
+                        duration: 1000
+                    });
+                $(".container")
+                    .delay(4000)
+                    .velocity("callout.swing");
 
-            //     $("#bow")
-            //         .velocity({
-            //             rotateZ: -120
-            //         }, {
-            //             duration: 1000,
-            //             delay: 4000
-            //                 // delay: 800
-            //         });
-            // },
+                $("#bow")
+                    .velocity({
+                        rotateZ: -120
+                    }, {
+                        duration: 1000,
+                        delay: 4000
+                            // delay: 800
+                    });
+            },
         });
     });
     </script>
