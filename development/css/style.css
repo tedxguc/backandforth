@@ -485,6 +485,36 @@ textarea {
     display: none;
 }
 
+#sound-icon {
+    width: 10%;
+    position: fixed;
+    right: 2%;
+    top: 0%;
+    z-index: 10;
+}
+
+.content {
+  /*  display: none;*/
+  visibility: hidden;
+    margin-top: 8%;
+}
+
+#tedx-image {
+    width: 40%;
+    left: 30%;
+    position: absolute;
+    top: 26%;
+    display: none;
+}
+
+#bfimg {
+    width: 20%;
+    left: 40%;
+    top: 35%;
+    position: absolute;
+    display: none;
+}
+
 @media screen and (max-width: 52.5em) {
     #lastArrow,
     #leverArrow,

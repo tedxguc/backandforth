@@ -10,14 +10,23 @@
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/913504c8.vendor.css">
-    <link rel="stylesheet" href="css/dafe07fd.style.css">
-    <script src="js/7f25c30d.modernizr.custom.js"></script>
+    <!-- build:css css/vendor.css -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-underline.css" />
+    <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+    <!-- endbuild -->
+    <!-- build:css css/style.css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- endbuild -->
+    <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
     <div id="arrowlastdiv">
-        <object data="img/1aae545a.arrow.svg" type="image/svg+xml" id="asvg">
+        <object data="img/arrow.svg" type="image/svg+xml" id="asvg">
         </object>
     </div>
     <div id="sharetext">
@@ -41,7 +50,7 @@
     left: 4%;
     bottom: 5%;">
     </object>
-    <img id="tedxguclogo2" src="2e9bd6ea.tedxguc2.png" style="width:15%; position: fixed;
+    <img id="tedxguclogo2" src="tedxguc2.png" style="width:15%; position: fixed;
     right: 4%;
     bottom: 5%;">
     <div id="fb-root"></div>
@@ -55,7 +64,12 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
-    <script src="js/fcf70625.vendor.js"></script>
+    <!-- build:js js/vendor.js -->
+    <script src="./jquery/jquery.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script src="js/fullscreenForm.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
