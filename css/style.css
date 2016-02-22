@@ -72,7 +72,7 @@
 /*button#websiteredirect:hover{
     color:white;
     opacity: 0.8;
-    z-index: 
+    z-index:
 }*/
 
 .hvr-shutter-out-horizontal {
@@ -235,7 +235,6 @@ a.svgclick:after {
     min-width: 27%;
 }
 
-#cq2,
 #q3,
 #q4,
 #q6 {
@@ -477,7 +476,7 @@ textarea {
 
 
 /*.greeting{
-    position: absolute; 
+    position: absolute;
     top: 50%;
 }*/
 
