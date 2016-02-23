@@ -404,10 +404,6 @@ button.fs-continue,
     resize: none;
 }
 
-.fs-form-overview .fs-fields textarea {
-    color: #FFFFFF;
-}
-
 .fs-fields textarea:focus {
     outline: none;
 }
